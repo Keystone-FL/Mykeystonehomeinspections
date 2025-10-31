@@ -1,89 +1,390 @@
 <!DOCTYPE html>
-font-size: 0.9em;
-color: #666;
-}
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keystone Home Inspections | Jupiter, FL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fff;
+      color: #000;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #002b5c;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      z-index: 1000;
+    }
+
+    nav img {
+      height: 55px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background-color: #f2b600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    header {
+      height: 90vh;
+      background: url('images/Picture7.png') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    header button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1em;
+      background-color: #002b5c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    header button:hover {
+      background-color: #f2b600;
+      color: #002b5c;
+    }
+
+    section {
+      padding: 100px 10%;
+    }
+
+    h2 {
+      color: #002b5c;
+      border-bottom: 2px solid #f2b600;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .about img {
+      max-width: 350px;
+      border-radius: 10px;
+      margin-right: 30px;
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about div {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .services ul {
+      columns: 2;
+      column-gap: 40px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .services li::before {
+      content: "✔️ ";
+      color: #002b5c;
+    }
+
+    .download-btn {
+      background-color: #002b5c;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #f2b600;
+      color: #002b5c;
+    }
+
+    .buyers-sellers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .buyers-sellers div {
+      flex: 1;
+      min-width: 300px;
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .ticker {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      background-color: #fff;
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .ticker img {
+      height: 80px;
+      margin: 0 25px;
+      animation: scroll 25s linear infinite;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    .honor {
+      text-align: center;
+      background: #f9f9f9;
+    }
+
+    .honor img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    form input, form textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #002b5c;
+      color: white;
+      padding: 12px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #f2b600;
+      color: #002b5c;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #002b5c;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    footer img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #002b5c;
+      }
+
+      .about {
+        flex-direction: column;
+      }
+
+      .services ul {
+        columns: 1;
+      }
+
+      .buyers-sellers {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<img src="Picture 999.png" alt="Keystone Home Inspections Logo">
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#reports">Our Reports</a>
-<a href="#contact">Contact</a>
-<a href="#appointment">Book Now</a>
-</nav>
-</header>
+  <!-- Navigation -->
+  <nav>
+    <img src="images/Picture 888.png" alt="Keystone Home Inspections Logo">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#agents">Agents</a></li>
+      <li><a href="#buyers">Sellers/Buyers</a></li>
+      <li><a href="#areas">Service Areas</a></li>
+      <li><a href="#discounts">Discounts</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<section class="hero">
-<img src="Picture 999.png" class="logo-overlay" alt="Keystone Logo Overlay">
-<h1>Peace of Mind, One Inspection at a Time</h1>
-<p>Licensed • Certified • Trusted by Florida Homeowners</p>
-<a href="#appointment" class="btn">Schedule Your Inspection</a>
-</section>
+  <!-- Hero -->
+  <header id="home">
+    <h1>Peace of Mind, One Inspection at a Time.</h1>
+    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Schedule Your Inspection</button>
+  </header>
 
-<section class="section about-section" id="about">
-<img src="350099592_169853375782092_232812587047047621_n.jpg" alt="Thomas Cathcart Portrait">
-<h2>Meet Thomas Cathcart</h2>
-<p>I'm a licensed Certified Professional Home Inspector with over 20 years of experience in real estate, property renovations, and building systems. I'm skilled in identifying defects, evaluating roofs, electrical, plumbing, HVAC, and structural components, and delivering clear, detailed inspection reports. A proud father of three, I bring integrity and diligence to every inspection. Whether you’re buying, selling, or securing your home, you can rest assured that the Keystone Home Inspections team will provide you with accurate, comprehensive results and peace of mind.</p>
+  <!-- About -->
+  <section id="about" class="about">
+    <img src="images/350099592_169853375782092_232812587047047621_n.jpg" alt="Thomas Cathcart">
+    <div>
+      <h2>Meet Your Certified Professional Home Inspector</h2>
+      <p>I’m a man of faith first — a Christian who strives to live each day with honesty, humility, and integrity. My relationship with God guides the way I live, work, and treat others. I’m also a proud father of three wonderful children who remind me every day of what truly matters. At Keystone Home Inspections, those same values form the foundation of everything I do.</p>
+      <p>As a Licensed Florida Home Inspector, I bring over 20+ years of experience in real estate, property renovation, and building systems. I take pride in providing thorough, accurate, and easy-to-understand inspection reports that help families make confident decisions about their homes. Whether I’m evaluating roofing, electrical, plumbing, HVAC, or structural components, my goal is always the same — to serve others with integrity and ensure every client feels peace of mind knowing their home has been inspected with care and honesty.</p>
+      <p>Rest assured — when you choose Keystone Home Inspections, you’re not just getting an inspection; you’re getting a promise of integrity, faith, and experience you can trust.</p>
+    </div>
+  </section>
 
-<div class="cert-badges">
-<img src="24-high-resolution-for-print-png-1545171544.png" alt="InterNACHI CPI">
-<img src="53-high-resolution-for-print-png-1545340210.png" alt="4-Point Inspector">
-<img src="120-high-resolution-for-print-png-1547058918.png" alt="WDO Inspector">
-<img src="8-high-resolution-for-print-png-1545085551.png" alt="InterNACHI Badge">
-<img src="77-high-resolution-for-print-png-1546017000.png" alt="Moisture Intrusion Inspector">
-<img src="150-high-resolution-for-print-png-1548196380.png" alt="Wind Mitigation Inspector">
-<img src="162-high-resolution-for-print-png-1550611175.png" alt="Deck Inspector">
-<img src="144-high-resolution-for-print-png-1548195589.png" alt="Roof Inspector">
-<img src="300-high-resolution-for-print-png-1673037731.png" alt="Condo Inspector">
-</div>
-</section>
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Full Home Inspections</li>
+      <li>Wind Mitigation Inspections</li>
+      <li>Roof & Insurance Inspections</li>
+      <li>4-Point Inspections</li>
+      <li>WDO (Termite) Inspections</li>
+      <li>Mold & Moisture Assessments</li>
+      <li>Pre-Listing Inspections</li>
+    </ul>
+  </section>
 
-<section class="section" id="services">
-<h2>Our Services</h2>
-<div class="grid">
-<div class="card"><strong>Full Home Inspections</strong><br>Comprehensive evaluation of all major systems and structures.</div>
-<div class="card"><strong>Pre-Listing Inspections</strong><br>For sellers, investors, and real estate agents preparing properties for market.</div>
-<div class="card"><strong>Wind Mitigation & 4-Point Inspections</strong><br>Insurance-required reports with same-day delivery.</div>
-<div class="card"><strong>Termite (WDO) Inspections</strong><br>Identify hidden wood-destroying organisms and moisture damage.</div>
-<div class="card"><strong>Insurance Inspections</strong><br>Thorough evaluations for underwriting and policy renewal requirements.</div>
-</div>
-</section>
+  <!-- Agents -->
+  <section id="agents">
+    <h2>For Agents & Investors</h2>
+    <p>We partner with real estate agents and investors to ensure smooth, professional transactions. Download our pre-listing inspection checklist to prepare your property for success.</p>
+    <a href="pdfs/Pre-Listing-Inspection-Checklist.pdf" class="download-btn" target="_blank">📄 Download Pre-Listing Checklist (PDF)</a>
+  </section>
 
-<section class="section" id="reports">
-<h2>About Our Reports</h2>
-<p>Our inspection reports are designed for clarity and confidence. Each report includes high-resolution images, detailed findings, and actionable recommendations so that you fully understand your property's condition. Delivered digitally within 24 hours, they’re easy to read and ready to share with agents or insurance providers.</p>
-</section>
+  <!-- Sellers/Buyers -->
+  <section id="buyers" class="buyers-sellers">
+    <div>
+      <h2>For Buyers</h2>
+      <p>Know the true condition of your home before you buy.</p>
+      <a href="pdfs/Buyers-Home-Inspection-Checklist.pdf" class="download-btn" target="_blank">🏡 Download Buyer's Checklist (PDF)</a>
+    </div>
+    <div>
+      <h2>For Sellers</h2>
+      <p>Gain confidence listing your property by addressing issues before they surface.</p>
+      <a href="pdfs/Sellers-Home-Preparation-Checklist.pdf" class="download-btn" target="_blank">🧾 Download Seller's Checklist (PDF)</a>
+    </div>
+  </section>
 
-<section class="cta" id="appointment">
-<h2>Schedule Your Inspection Today</h2>
-<p>Buying a home is one of the biggest investments you’ll ever make. At Keystone Home Inspections, we’re committed to helping you protect that investment with thorough, accurate inspections you can trust.</p>
-<a href="#contact">Request a Call Back</a>
-</section>
+  <!-- Service Areas -->
+  <section id="areas">
+    <h2>Service Areas</h2>
+    <p>Proudly serving Jupiter, Palm Beach County, Martin County, St. Lucie County, Okeechobee County, and Indian River County.</p>
+    <iframe src="https://www.google.com/maps?q=Jupiter,Florida&output=embed" width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen></iframe>
+  </section>
 
-<section class="section" id="contact">
-<h2>Contact Us</h2>
-<p>Have questions or ready to schedule your inspection? Fill out the form below, and we’ll contact you promptly.</p>
-<form>
-<input type="text" placeholder="Full Name" required style="padding:10px;width:100%;margin-bottom:10px;">
-<input type="email" placeholder="Email Address" required style="padding:10px;width:100%;margin-bottom:10px;">
-<input type="tel" placeholder="Phone Number" style="padding:10px;width:100%;margin-bottom:10px;">
-<textarea placeholder="How can we help you?" rows="4" style="padding:10px;width:100%;margin-bottom:10px;"></textarea>
-<button type="submit" style="background:#0c4b8e;color:#fff;border:none;padding:12px 25px;border-radius:5px;font-weight:600;">Submit</button>
-</form>
+  <!-- Honoring Our Heroes -->
+  <section id="discounts" class="honor">
+    <h2>Honoring Our Heroes</h2>
+    <img src="images/Hero Discount Picture.png" alt="Honoring Our Heroes">
+    <p>At Keystone Home Inspections, we proudly stand behind the men and women who serve our communities and our nation. As a token of our gratitude, we offer special discounts to all active-duty military, veterans, law enforcement officers, firefighters, EMS personnel, healthcare professionals, and teachers. Your dedication, courage, and commitment to others inspire us every day. This is our way of saying thank you for all that you do — for protecting, healing, and shaping the world we live in.</p>
+  </section>
 
-<h3>Service Area</h3>
-<p>We proudly serve Jupiter, Palm Beach County, Martin County, St. Lucie County, Okeechobee County, and Indian River County.</p>
+  <!-- Certification Ticker -->
+  <div class="ticker">
+    <img src="images/8-high-resolution-for-print-png-1545085551.png" alt="">
+    <img src="images/77-high-resolution-for-print-png-1546017000.png" alt="">
+    <img src="images/53-high-resolution-for-print-png-1545340210.png" alt="">
+    <img src="images/300-high-resolution-for-print-png-1673037731.png" alt="">
+    <img src="images/24-high-resolution-for-print-png-1545171544.png" alt="">
+    <img src="images/162-high-resolution-for-print-png-1550611175.png" alt="">
+    <img src="images/150-high-resolution-for-print-png-1548196380.png" alt="">
+    <img src="images/144-high-resolution-for-print-png-1548195589.png" alt="">
+    <img src="images/120-high-resolution-for-print-png-1547058918.png" alt="">
+  </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.749644872474!2d-80.09558932474759!3d26.934224276615257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88df2b01c0d87fd3%3A0x53ce5a44a49c812!2sJupiter%2C%20FL!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-</section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xdkpwbvp" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="text" name="address" placeholder="Address">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <textarea name="message" rows="5" placeholder="Message or Inquiry"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <p style="text-align:center; margin-top:15px;">A representative from Keystone Home Inspections will contact you shortly.</p>
+  </section>
 
-<footer>
-© 2025 Keystone Home Inspections | Jupiter, FL | Licensed & Insured | Florida Home Inspector HI18259<br>
-Call: (561) 596-6083 | Email: MyKeystoneInspections@gmail.com
-</footer>
+  <!-- Footer -->
+  <footer>
+    <img src="images/Picture 888.png" alt="Keystone Logo">
+    <p>(561) 596-6083 • MyKeystoneInspections@gmail.com</p>
+    <p>Licensed & Insured • FL Home Inspector #HI18259</p>
+    <p>© 2025 Keystone Home Inspections • Jupiter, Florida</p>
+  </footer>
+
 </body>
 </html>
 
