@@ -94,6 +94,25 @@ nav ul li a:hover{color:#f2b600;}
   transition:.3s;
 }
 .button:hover{background:#002b5c;color:#f2b600;}
+ /* MOBILE FIX: stack logo and button vertically */
+    @media (max-width: 768px) {
+      .logo {
+        text-align: center;
+        padding: 15px 4%;
+      }
+
+      .logo .main-logo {
+        max-width: 260px;
+      }
+
+      .schedule-btn {
+        position: static;
+        display: inline-block;
+        margin-top: 12px;
+        transform: none;
+      }
+    }
+  </style>
 </style>
 </head>
 <body>
