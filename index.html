@@ -29,15 +29,26 @@ nav ul li a:hover{color:#f2b600;}
 
 
 
-.logo-center img {
-  max-width: 260px;
+.logo {
+  position: relative;
+  background: #fff;
+  padding: 25px 8%;
+  text-align: center;
+}
+
+.logo .main-logo {
+  max-width: 320px;
   height: auto;
 }
 
-.logo-right .button {
+.schedule-btn {
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: #f2b600;
   color: #002b5c;
-  padding: 14px 26px;
+  padding: 14px 32px;
   border: none;
   border-radius: 6px;
   font-size: 1em;
@@ -46,7 +57,7 @@ nav ul li a:hover{color:#f2b600;}
   transition: background-color 0.3s, color 0.3s;
 }
 
-.logo-right .button:hover {
+.schedule-btn:hover {
   background-color: #002b5c;
   color: #f2b600;
 }
