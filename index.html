@@ -112,7 +112,29 @@ nav ul li a:hover{color:#f2b600;}
         transform: none;
       }
     }
-  </style>
+  .ticker {
+  background: #f0f0f0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 25px 0;
+}
+
+.ticker-track {
+  display: inline-flex;
+  animation: scrollTicker 35s linear infinite;
+}
+
+.ticker-track img {
+  margin: 0 40px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+@keyframes scrollTicker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+</style>
 </head>
 <body>
 
