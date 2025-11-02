@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | Keystone Home Inspections</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* NAVIGATION (same as homepage) */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #002b5c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #f2b600;
+}
+
+/* HERO IMAGE */
+.hero {
+  margin-top: 70px;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: url('images/Florida Home 1.jpg') center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  padding: 0 10%;
+}
+.hero p {
+  max-width: 900px;
+  font-size: 1.3em;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+.hero .button {
+  background-color: #f2b600;
+  color: #002b5c;
+  padding: 14px 34px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.hero .button:hover {
+  background-color: #002b5c;
+  color: #f2b600;
+}
+
+/* MAIN CONTENT */
+section {
+  padding: 80px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+}
+.text-content {
+  flex: 1 1 500px;
+}
+.text-content h2 {
+  color: #002b5c;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.text-content p,
+.text-content ul {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.text-content ul {
+  padding-left: 20px;
+}
+.image-content {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.image-content img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer {
+  background: #002b5c;
+  color: #fff;
+  text-align: center;
+  padding: 50px 15px;
+}
+footer img {
+  max-width: 230px;
+  margin-bottom: 10px;
+}
+footer p {
+  margin: 5px 0;
+  font-size: 0.95em;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 80px 5%;
+  }
+  section {
+    flex-direction: column;
+    padding: 60px 8%;
+  }
+  .image-content img {
+    max-width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="agents.html">Agents</a></li>
+    <li><a href="buyers-sellers.html">Sellers/Buyers</a></li>
+    <li><a href="index.html#areas">Service Areas</a></li>
+    <li><a href="index.html#discounts">Discounts</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <p>
+    At <strong>Keystone Home Inspections</strong>, we deliver thorough, high-quality inspections backed by clear, detailed reports that are easy to read and understand. Each report includes professional high-quality photographs, honest findings, and practical recommendations to help you make confident decisions. Rest assured — we’re here to protect your investment and give you peace of mind, every step of the way.
+  </p>
+  <a href="index.html#contact" class="button">Schedule Your Inspection</a>
+</section>
+
+<!-- MAIN CONTENT -->
+<section>
+  <div class="text-content">
+    <h2>What’s Included in a Full Home Inspection</h2>
+
+    <h3>Exterior & Structure</h3>
+    <ul>
+      <li>Roof covering, flashing, gutters, vents, and skylights</li>
+      <li>Siding, soffits, fascia, trim, and exterior doors/windows</li>
+      <li>Driveways, walkways, grading, drainage, and retaining walls</li>
+      <li>Foundation, crawlspace, framing, and visible structural elements</li>
+    </ul>
+
+    <h3>Interior</h3>
+    <ul>
+      <li>Walls, ceilings, floors, stairs, railings, and interior doors</li>
+      <li>Windows and visible insulation</li>
+      <li>Attic access, ventilation, and insulation quality</li>
+    </ul>
+
+    <h3>Plumbing</h3>
+    <ul>
+      <li>Visible water supply and drain piping</li>
+      <li>Fixtures, faucets, sinks, tubs, and toilets</li>
+      <li>Water heater (age, type, condition, installation)</li>
+      <li>Drainage and leak inspection</li>
+    </ul>
+
+    <h3>Electrical</h3>
+    <ul>
+      <li>Service panel, breakers, and grounding</li>
+      <li>Outlets, switches, and visible wiring</li>
+      <li>Smoke and carbon monoxide detectors</li>
+      <li>Lighting fixtures and ceiling fans</li>
+    </ul>
+
+    <h3>HVAC (Heating, Ventilation & Air Conditioning)</h3>
+    <ul>
+      <li>Air conditioning and heating equipment</li>
+      <li>Ductwork and airflow</li>
+      <li>Thermostat operation and filter access</li>
+    </ul>
+
+    <h3>Appliances</h3>
+    <ul>
+      <li>Permanently installed appliances such as ranges, ovens, dishwashers, and built-in microwaves</li>
+    </ul>
+  </div>
+
+  <div class="image-content">
+    <img src="images/Home Inspection 2 With Keystone Logo.png" alt="Home Inspection with Keystone Logo">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="images/Picture 888 White.png" alt="Keystone Home Inspections White Logo">
+  <p>© 2025 Keystone Home Inspections • Jupiter, Florida</p>
+  <p>(561) 596-6083 • MyKeystoneInspections@gmail.com</p>
+  <p>Licensed Florida Home Inspector #HI18259 • Licensed & Insured</p>
+</footer>
+
+</body>
+</html>
