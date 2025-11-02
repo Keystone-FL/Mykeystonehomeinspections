@@ -237,6 +237,53 @@ footer p {
     max-width: 100%;
   }
 }
+/* ✅ FOUR-POINT INSPECTION SECTION */
+.fourpoint-section {
+  background: #ffffff;
+  padding: 80px 8%;
+}
+
+.fourpoint-wrap {
+  display: flex;
+  flex-wrap: wrap-reverse; /* flips image to right side on desktop */
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.fourpoint-img img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.fourpoint-text {
+  flex: 1 1 480px;
+}
+
+.fourpoint-text h2 {
+  color: #002b5c;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.fourpoint-text p {
+  font-size: 1.15em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .fourpoint-wrap {
+    flex-direction: column;
+    text-align: left;
+  }
+  .fourpoint-img img {
+    max-width: 100%;
+  }
+}
 </style>
 </style>
 </head>
