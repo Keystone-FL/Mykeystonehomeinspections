@@ -136,9 +136,17 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
 }
-
-.image-content img:hover {
+.image-content img,
+.wind-img img,
+.fourpoint-img img {
+  transition: transform 0.3s ease;
+}
+/* Hover zoom effect for all service images */
+.image-content img:hover,
+.wind-img img:hover,
+.fourpoint-img img:hover {
   transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
 
 /* FOOTER */
