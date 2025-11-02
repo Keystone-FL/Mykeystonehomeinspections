@@ -159,6 +159,75 @@ footer p {
     max-width: 100%;
   }
 }
+  <style>
+/* your existing CSS above */
+
+/* ✅ NEW: WIND MITIGATION STYLES */
+.wind-section {
+  background: #f8f8f8;
+  padding: 80px 8%;
+}
+
+.wind-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.wind-img img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.wind-text {
+  flex: 1 1 480px;
+}
+
+.wind-text h2 {
+  color: #002b5c;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.wind-text h3 {
+  color: #f2b600;
+  font-size: 1.5em;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.wind-text p {
+  font-size: 1.15em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.wind-text ul {
+  font-size: 1.1em;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.wind-text ul li {
+  margin-bottom: 8px;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .wind-wrap {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .wind-img img {
+    max-width: 100%;
+  }
+}
+</style>
 </style>
 </head>
 <body>
