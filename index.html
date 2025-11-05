@@ -98,17 +98,18 @@ nav {
     white-space: nowrap;   /* prevents breaking mid-word */
   }
 
-  /* === MOBILE BUTTON STACKING === */
+   /* === MOBILE BUTTONS UNDER MENU (SIDE-BY-SIDE) === */
   .nav-buttons {
-    position: static;              /* disables absolute positioning */
-    transform: none;               /* removes vertical offset */
-    margin-top: 12px;              /* adds space below menu links */
-    flex-direction: column;        /* stacks buttons vertically */
-    justify-content: center;
+    position: static;           /* remove absolute positioning */
+    transform: none;            /* disable vertical offset */
+    margin-top: 12px;           /* add space below menu */
+    display: flex;              /* align buttons side by side */
+    justify-content: center;    /* center buttons under menu */
     align-items: center;
-    width: 100%;                   /* centers buttons properly */
+    gap: 16px;                  /* even space between buttons */
+    width: 100%;
+    flex-wrap: wrap;            /* ensures wrapping on very small phones */
     text-align: center;
-    gap: 10px;                     /* small spacing between them */
   }
 
   .top-btn {
@@ -117,7 +118,7 @@ nav {
   }
 
   body {
-    padding-top: 115px;            /* shifts logo down a bit for mobile */
+    padding-top: 115px;         /* keeps logo from being covered */
   }
 
   /* Buttons centered below menu */
