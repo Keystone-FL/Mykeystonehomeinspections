@@ -20,7 +20,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px; /* adds breathing space between menu and buttons */
+  gap: 25px; /* space between menu and buttons */
   padding: 15px 5%;
   z-index: 1000;
 }
@@ -58,8 +58,10 @@ nav ul li a:hover {
   align-items: center;
   margin-left: 40px;
   position: relative;
-  left: -120px; /* moves the whole group left toward the Contact link */
+  left: -140px; /* adjust to move buttons closer to Contact */
+}
 
+/* Individual buttons */
 .top-btn {
   border: 2px solid #f2b600;
   color: #f2b600;
@@ -69,11 +71,21 @@ nav ul li a:hover {
   text-decoration: none;
   font-size: 0.9em;
   transition: all 0.3s;
+  line-height: 1.3;
+  text-align: center;
 }
 
 .top-btn:hover {
   background-color: #f2b600;
   color: #002b5c;
+}
+
+/* Phone number smaller and white */
+.phone-number {
+  display: block;
+  font-size: 0.85em;
+  color: #fff;
+  font-weight: normal;
 }
 
 /* Responsive behavior */
@@ -86,6 +98,7 @@ nav ul li a:hover {
   .nav-buttons {
     position: static;
     margin-top: 10px;
+    flex-direction: column;
   }
 
   nav ul {
