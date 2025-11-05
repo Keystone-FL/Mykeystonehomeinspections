@@ -53,14 +53,34 @@ nav {
   color: #f2b600;
 }
 
-/* Right-side buttons (float independently) */
+/* Right-side buttons (float independently and positioned neatly) */
 .nav-buttons {
   position: absolute;
-  right: 5%;
+  right: 10%;               /* moves buttons away from Contact toward screen edge */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  gap: 12px;
+  gap: 14px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Buttons look balanced and readable */
+.top-btn {
+  border: 2px solid #f2b600;
+  color: #f2b600;
+  font-weight: bold;
+  padding: 10px 22px;
+  border-radius: 28px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s;
+  white-space: nowrap; /* keeps from wrapping text inside */
+}
+
+.top-btn:hover {
+  background-color: #f2b600;
+  color: #002b5c;
 }
 
 .top-btn {
