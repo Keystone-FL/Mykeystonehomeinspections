@@ -86,16 +86,26 @@ nav {
 /* === MOBILE NAVIGATION ADJUSTMENTS === */
 @media (max-width: 768px) {
   /* Make sure nav text wraps nicely and scales down */
-  nav ul {
-    flex-wrap: wrap;
+   nav .nav-buttons {
+    position: static !important;   /* disables desktop absolute rule */
+    transform: none !important;
+    margin-top: 12px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
     text-align: center;
-    gap: 14px;
   }
 
-  nav ul li a {
-    font-size: 0.9em;      /* slightly smaller text for small screens */
-    white-space: nowrap;   /* prevents breaking mid-word */
+  nav .top-btn {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  body {
+    padding-top: 115px;
   }
 
    /* === MOBILE BUTTONS UNDER MENU (SIDE-BY-SIDE) === */
