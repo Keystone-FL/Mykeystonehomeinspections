@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Keystone Home Inspections | Jupiter FL</title>
 <style>
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background-color:#fff;
-  color:#000;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #000;
 }
+
 /* ===== TOP NAVIGATION (centered menu + right buttons) ===== */
 nav {
   position: fixed;
@@ -20,7 +21,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px; /* space between menu and buttons */
+  gap: 25px;
   padding: 15px 5%;
   z-index: 1000;
 }
@@ -58,7 +59,7 @@ nav ul li a:hover {
   align-items: center;
   margin-left: 40px;
   position: relative;
-  left: -140px; /* adjust to move buttons closer to Contact */
+  left: -140px; /* adjust this to shift the buttons left or right */
 }
 
 /* Individual buttons */
@@ -73,6 +74,7 @@ nav ul li a:hover {
   transition: all 0.3s;
   line-height: 1.3;
   text-align: center;
+  background: transparent;
 }
 
 .top-btn:hover {
@@ -99,6 +101,8 @@ nav ul li a:hover {
     position: static;
     margin-top: 10px;
     flex-direction: column;
+    left: 0;
+    margin-left: 0;
   }
 
   nav ul {
@@ -107,7 +111,6 @@ nav ul li a:hover {
     gap: 20px;
   }
 }
-
 .logo {
   display: flex;
   justify-content: space-between;
