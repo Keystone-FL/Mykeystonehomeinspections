@@ -11,9 +11,67 @@ body{
   background-color:#fff;
   color:#000;
 }
-nav{
-  position:fixed;top:0;width:100%;background:#002b5c;display:flex;justify-content:center;align-items:center;
-  padding:15px 0;z-index:1000;
+/* ===== TOP NAVIGATION + CONTACT INFO ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #002b5c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f2b600;
+}
+
+.top-contact {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-link {
+  color: #f2b600;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: #ffffff;
+}
+
+/* Mobile view — stack contact info under menu */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .top-contact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
 }
 nav ul{list-style:none;display:flex;gap:35px;margin:0;padding:0;}
 nav ul li a{color:#fff;text-decoration:none;font-weight:bold;transition:.3s;}
