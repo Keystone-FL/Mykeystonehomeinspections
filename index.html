@@ -122,6 +122,43 @@ nav {
   }
 }
 
+/* === MOBILE NAVIGATION ADJUSTMENTS === */
+@media (max-width: 768px) {
+  /* Make sure nav text wraps nicely and scales down */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;      /* slightly smaller text for small screens */
+    white-space: nowrap;   /* prevents breaking mid-word */
+  }
+
+  /* Buttons centered below menu */
+  .nav-buttons {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .top-btn {
+    font-size: 1em;
+    padding: 8px 18px;
+  }
+
+  body {
+    padding-top: 95px; /* prevent blue bar from covering logo */
+  }
+}
+
 /* Desktop spacing below nav */
 body {
   padding-top: 85px;
