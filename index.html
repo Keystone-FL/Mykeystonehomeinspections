@@ -251,6 +251,36 @@ body {
   padding: 5px;              /* adds breathing space inside the frame */
   box-sizing: border-box;
 }
+
+/* === MOBILE STACK FIX FOR BUTTONS & LOGO === */
+@media (max-width: 768px) {
+  /* Stack buttons below nav links */
+  .nav-buttons {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .top-btn {
+    font-size: 1.1em;
+    padding: 10px 22px;
+    margin-bottom: 6px; /* adds small space between buttons */
+  }
+
+  /* Push logo down when nav bar gets taller */
+  .logo {
+    margin-top: 40px; /* increase if still overlapping */
+  }
+
+  body {
+    padding-top: 120px; /* adds extra breathing room below the blue bar */
+  }
+}
 </style>
 </head>
 <body>
