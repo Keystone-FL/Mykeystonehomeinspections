@@ -67,7 +67,7 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.35); /* adjust opacity: .25–.45 for lighter/darker effect */
+  background: rgba(0, 0, 0, 0.45); /* slightly darker */
   z-index: 0;
 }
 
@@ -75,10 +75,11 @@ nav ul li a:hover {
   position: relative;
   z-index: 1; /* keeps your text above the overlay */
 }
-/* ✅ Hero text in black for clean contrast */
+
+/* ✅ Make hero text white again */
+.hero h1,
 .hero p {
-  color: #000000; /* pure black */
-  text-shadow: 1px 1px 4px rgba(255,255,255,0.3); /* soft white halo for clarity */
+  color: #ffffff;
 }
 
 .hero strong {
