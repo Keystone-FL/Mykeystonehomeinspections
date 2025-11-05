@@ -97,6 +97,27 @@ nav {
     font-size: 0.9em;      /* slightly smaller text for small screens */
     white-space: nowrap;   /* prevents breaking mid-word */
   }
+  /* === MOBILE BUTTON STACKING === */
+  .nav-buttons {
+    position: static;              /* disables absolute positioning */
+    transform: none;               /* removes vertical offset */
+    margin-top: 12px;              /* adds space below menu links */
+    flex-direction: column;        /* stacks buttons vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%;                   /* centers buttons properly */
+    text-align: center;
+    gap: 10px;                     /* small spacing between them */
+  }
+
+  .top-btn {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  body {
+    padding-top: 115px;            /* shifts logo down a bit for mobile */
+  }
 
   /* Buttons centered below menu */
   .nav-buttons {
