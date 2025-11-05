@@ -53,45 +53,31 @@ nav {
   color: #f2b600;
 }
 
-/* Right-side buttons (float independently and positioned neatly) */
+/* === Right-side buttons for desktop === */
 .nav-buttons {
   position: absolute;
-  right: 10%;               /* moves buttons away from Contact toward screen edge */
+  right: 3%;                /* controls distance from right edge (try 2–5%) */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  gap: 14px;
+  gap: 16px;
   justify-content: flex-end;
   align-items: center;
-}
-
-/* Buttons look balanced and readable */
-.top-btn {
-  border: 2px solid #f2b600;
-  color: #f2b600;
-  font-weight: bold;
-  padding: 10px 22px;
-  border-radius: 28px;
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: all 0.3s;
-  white-space: nowrap; /* keeps from wrapping text inside */
-}
-
-.top-btn:hover {
-  background-color: #f2b600;
-  color: #002b5c;
+  min-width: 240px;         /* keeps spacing stable on wide screens */
+  z-index: 1001;            /* ensures buttons stay above other elements */
 }
 
 .top-btn {
+  flex-shrink: 0;
   border: 2px solid #f2b600;
   color: #f2b600;
   font-weight: bold;
-  padding: 8px 20px;
-  border-radius: 25px;
+  padding: 10px 24px;
+  border-radius: 30px;
   text-decoration: none;
-  font-size: 1.15em;
+  font-size: 1.1em;
   transition: all 0.3s;
+  white-space: nowrap;      /* keeps button text in one line */
 }
 
 .top-btn:hover {
@@ -101,27 +87,38 @@ nav {
 
 /* === MOBILE FIXES === */
 @media (max-width: 768px) {
-  .nav-wrapper {
+  nav {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    padding: 12px 0;
   }
 
+  .nav-center ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  /* center the buttons on mobile */
   .nav-buttons {
-  position: static;
-  transform: none;
-  margin-top: 10px;
-  flex-wrap: wrap;
-  justify-content: center; /* centers the buttons on mobile */
-  align-items: center;
-}
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;           /* ensures full width for proper centering */
+    text-align: center;
+  }
 
   .top-btn {
-    font-size: 1.1em;
+    font-size: 1em;
     padding: 8px 18px;
   }
 
   body {
-    padding-top: 95px; /* ensures logo isn’t covered by blue bar */
+    padding-top: 95px;     /* prevents blue bar from overlapping logo */
   }
 }
 
