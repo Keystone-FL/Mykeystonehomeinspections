@@ -85,43 +85,6 @@ nav {
   color: #002b5c;
 }
 
-/* === MOBILE FIXES === */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 0;
-  }
-
-  .nav-center ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-  }
-
-  /* center the buttons on mobile */
-  .nav-buttons {
-    position: static;
-    transform: none;
-    margin-top: 10px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;           /* ensures full width for proper centering */
-    text-align: center;
-  }
-
-  .top-btn {
-    font-size: 1em;
-    padding: 8px 18px;
-  }
-
-  body {
-    padding-top: 95px;     /* prevents blue bar from overlapping logo */
-  }
-}
-
 /* === MOBILE NAVIGATION ADJUSTMENTS === */
 @media (max-width: 768px) {
   /* Make sure nav text wraps nicely and scales down */
