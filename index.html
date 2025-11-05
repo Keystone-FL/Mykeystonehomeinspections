@@ -11,17 +11,24 @@ body{
   background-color:#fff;
   color:#000;
 }
-/* ===== TOP NAVIGATION + CONTACT INFO ===== */
+/* ===== TOP NAVIGATION (centered menu + right buttons) ===== */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #002b5c;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 15px 5%;
   z-index: 1000;
+}
+
+/* Center the menu block */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
@@ -43,39 +50,50 @@ nav ul li a:hover {
   color: #f2b600;
 }
 
-.top-contact {
+/* Right-side buttons */
+.nav-buttons {
+  position: absolute;
+  right: 5%;
   display: flex;
-  gap: 20px;
+  gap: 12px;
   align-items: center;
 }
 
-.contact-link {
+.top-btn {
+  border: 2px solid #f2b600;
   color: #f2b600;
   font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
   text-decoration: none;
-  font-size: 0.95em;
-  transition: color 0.3s;
+  font-size: 0.9em;
+  transition: all 0.3s;
 }
 
-.contact-link:hover {
-  color: #ffffff;
+.top-btn:hover {
+  background-color: #f2b600;
+  color: #002b5c;
 }
 
-/* Mobile view — stack contact info under menu */
+/* Responsive behavior */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
-  .top-contact {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
+
+  .nav-buttons {
+    position: static;
+    margin-top: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 }
-nav ul{list-style:none;display:flex;gap:35px;margin:0;padding:0;}
-nav ul li a{color:#fff;text-decoration:none;font-weight:bold;transition:.3s;}
-nav ul li a:hover{color:#f2b600;}
+
 .logo {
   display: flex;
   justify-content: space-between;
