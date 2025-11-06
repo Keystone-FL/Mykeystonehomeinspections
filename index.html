@@ -83,7 +83,7 @@ nav {
   color: #002b5c;
 }
 
-/* === MOBILE NAVIGATION FIX — center menu + side-by-side buttons === */
+/* === MOBILE NAVIGATION FIX — Centered buttons under menu === */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -104,27 +104,37 @@ nav {
     white-space: nowrap;
   }
 
-  /* Force Call + Email buttons to center below menu text */
+  /* Force Call + Email buttons BELOW the menu, side-by-side */
   .nav-buttons {
-    position: static !important;
-    transform: none !important;
-    margin-top: 14px !important;
+    all: unset;                /* wipes out desktop absolute positioning */
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 18px !important;
+    gap: 20px !important;
     width: 100% !important;
-    flex-wrap: nowrap !important; /* keeps them side-by-side */
+    flex-wrap: nowrap !important; /* keeps side-by-side */
     text-align: center !important;
+    margin-top: 14px !important;
+    order: 99;                 /* guarantees they render after menu */
   }
 
-  .top-btn {
+  .nav-buttons a {
+    border: 2px solid #f2b600 !important;
+    color: #f2b600 !important;
+    padding: 10px 24px !important;
+    border-radius: 28px !important;
+    text-decoration: none !important;
     font-size: 1.1em !important;
-    padding: 10px 22px !important;
+    font-weight: 700 !important;
+  }
+
+  .nav-buttons a:hover {
+    background-color: #f2b600 !important;
+    color: #002b5c !important;
   }
 
   body {
-    padding-top: 115px; /* pushes logo down when nav expands */
+    padding-top: 120px; /* keeps logo visible below tall nav */
   }
 }
 
