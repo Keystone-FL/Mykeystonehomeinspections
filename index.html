@@ -559,25 +559,31 @@ body {
     background-color: #002b5c !important;
   }
 }
-/* === MOBILE FIX: Show image ABOVE text in Meet Thomas section === */
+/* === MOBILE FIX: Move image ABOVE text for Meet Thomas section === */
 @media (max-width: 768px) {
   .meet-wrap {
-    display: flex;
-    flex-direction: column-reverse; /* ⬅️ This moves the image ABOVE the text */
-    align-items: center;
-    text-align: center;
+    display: flex !important;
+    flex-direction: column-reverse !important; /* Flip order */
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 20px !important;
   }
 
   .meet-text {
-    order: 2; /* text below */
+    width: 100% !important;
+    order: 2 !important; /* Ensure text is below */
   }
 
   .meet-img {
-    order: 1; /* image above */
-    margin-bottom: 20px;
+    width: 100% !important;
+    order: 1 !important; /* Force image above */
+    margin-bottom: 10px !important;
   }
 
   .meet-img img {
+    display: block;
+    margin: 0 auto;
     max-width: 300px;
     height: auto;
   }
