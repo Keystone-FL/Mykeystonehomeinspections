@@ -354,6 +354,83 @@ body {
     padding-top: 135px;
   }
 }
+/* === MOBILE FIX — EXACT 2-ROW NAV + CENTERED BUTTONS === */
+@media (max-width: 768px) {
+  /* Make sure the wrapper stacks vertically */
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* ✅ Force 2-row grouped layout */
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;            /* allows wrapping into 2 rows */
+    justify-content: center;    /* center items horizontally */
+    text-align: center;
+    gap: 10px 24px;             /* vertical and horizontal spacing */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 95%;
+  }
+
+  /* Make sure links are centered and don't break oddly */
+  .nav-menu li {
+    flex: 0 1 auto;
+  }
+
+  .nav-menu li a {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1em;
+    white-space: nowrap;
+  }
+
+  /* ✅ Forces line break after Agents (4th item) */
+  .nav-menu li:nth-child(4)::after {
+    content: "";
+    flex-basis: 100%; /* moves next items to new row */
+    width: 100%;
+  }
+
+  /* ✅ Call and Email buttons centered below menu */
+  .nav-buttons {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-buttons a {
+    border: 2px solid #f2b600;
+    color: #f2b600;
+    padding: 10px 22px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  .nav-buttons a:hover {
+    background-color: #f2b600;
+    color: #002b5c;
+  }
+
+  /* ✅ Add extra padding so logo doesn’t overlap */
+  body {
+    padding-top: 135px;
+  }
+}
 </style>
 </head>
 <body>
