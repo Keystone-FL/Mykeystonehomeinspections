@@ -316,6 +316,76 @@ footer p {
     max-width: 100%;
   }
 }
+/* ✅ SPECIALTY INSPECTIONS SECTION */
+.specialty-section {
+  background: #f8f8f8;
+  padding: 80px 8%;
+}
+
+.specialty-section h2 {
+  color: #002b5c;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Generic layout for each subsection */
+.specialty-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+/* Consistent circular images */
+.specialty-item img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(0, 43, 92, 0.35);
+  transition: all 0.35s ease;
+}
+
+.specialty-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 43, 92, 0.55);
+}
+
+.specialty-text {
+  flex: 1 1 480px;
+}
+
+.specialty-text h3 {
+  color: #002b5c;
+  font-size: 1.6em;
+  margin-bottom: 12px;
+}
+
+.specialty-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Alternate image positions (left/right pattern) */
+.specialty-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .specialty-item,
+  .specialty-item.reverse {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .specialty-item img {
+    margin-bottom: 20px;
+  }
+}
 </style>
 </style>
 </head>
