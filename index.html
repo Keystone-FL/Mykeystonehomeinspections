@@ -83,7 +83,7 @@ nav {
   color: #002b5c;
 }
 
-/* === MOBILE NAVIGATION FIX — centered menu + side-by-side buttons === */
+/* === MOBILE NAVIGATION FIX — center menu + side-by-side buttons === */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -104,27 +104,27 @@ nav {
     white-space: nowrap;
   }
 
-  /* Buttons below menu — centered side-by-side */
+  /* Force Call + Email buttons to center below menu text */
   .nav-buttons {
     position: static !important;
     transform: none !important;
-    margin-top: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    flex-wrap: wrap;
-    text-align: center;
+    margin-top: 14px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 18px !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important; /* keeps them side-by-side */
+    text-align: center !important;
   }
 
   .top-btn {
-    font-size: 1em;
-    padding: 10px 20px;
+    font-size: 1.1em !important;
+    padding: 10px 22px !important;
   }
 
   body {
-    padding-top: 115px; /* moves logo down under taller nav */
+    padding-top: 115px; /* pushes logo down when nav expands */
   }
 }
 
