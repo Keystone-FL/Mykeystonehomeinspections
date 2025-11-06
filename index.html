@@ -534,6 +534,15 @@ body {
     padding-top: 135px; /* space for nav bar */
   }
 }
+/* === DESKTOP FIX: Hide logo and white background === */
+@media (min-width: 769px) {
+  .logo {
+    display: none !important;      /* hides entire logo section */
+    background: none !important;   /* removes the white background */
+    padding: 0 !important;         /* removes any extra padding space */
+    margin: 0 !important;
+  }
+}
 </style>
 </head>
 <body>
