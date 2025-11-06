@@ -273,77 +273,71 @@ body {
   box-sizing: border-box;
 }
 
-/* === MOBILE FIX — Buttons UNDER menu, side-by-side, centered === */
+/* === MOBILE FIX — STACK MENU ITEMS, BUTTONS UNDERNEATH === */
 @media (max-width: 768px) {
-  /* Menu layout */
+
+  /* Wrap menu vertically */
   .nav-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding: 12px 0;
+    gap: 8px;
+    padding: 10px 0;
   }
 
-  /* Allow menu items to wrap naturally on small screens */
   .nav-menu {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;           /* ✅ lets items stack to next line */
-    justify-content: center;   /* center them on each line */
+    flex-direction: column;     /* ✅ stacks items vertically */
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    gap: 12px 18px;            /* vertical & horizontal spacing */
+    gap: 6px;                   /* small space between items */
     padding: 0;
     margin: 0;
     list-style: none;
-    width: 100%;               /* so text wraps within screen width */
-  }
-
-  .nav-menu li {
-    flex: 1 1 auto;            /* allow wrapping elements to take space evenly */
-    text-align: center;
+    width: 100%;
   }
 
   .nav-menu li a {
-    font-size: 0.95em;
-    white-space: normal;       /* ✅ allows words to wrap instead of staying one line */
-    display: inline-block;
-    line-height: 1.4;
+    font-size: 1em;
+    text-decoration: none;
+    white-space: normal;
+    display: block;
   }
 
-  /* Buttons appear BELOW the menu, side-by-side */
+  /* Buttons centered UNDER the stacked menu */
   .nav-buttons {
     all: unset;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 16px !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin-top: 14px !important;
-    order: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
   }
 
   .nav-buttons a {
-    border: 2px solid #f2b600 !important;
-    color: #f2b600 !important;
-    padding: 10px 22px !important;
-    border-radius: 28px !important;
-    text-decoration: none !important;
-    font-size: 1.1em !important;
-    font-weight: 700 !important;
+    border: 2px solid #f2b600;
+    color: #f2b600;
+    padding: 10px 22px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 700;
   }
 
   .nav-buttons a:hover {
-    background-color: #f2b600 !important;
-    color: #002b5c !important;
+    background-color: #f2b600;
+    color: #002b5c;
   }
 
-  /* Push logo lower when nav grows taller */
+  /* Push logo lower when nav bar grows taller */
   .logo {
-    margin-top: 55px; /* adjust if still overlapping */
+    margin-top: 55px;
   }
 
   body {
-    padding-top: 130px; /* extra room below blue bar */
+    padding-top: 135px; /* extra space below blue bar */
   }
 }
 </style>
