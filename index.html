@@ -283,16 +283,30 @@ body {
     padding: 12px 0;
   }
 
+  /* Allow menu items to wrap naturally on small screens */
   .nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;           /* ✅ lets items stack to next line */
+    justify-content: center;   /* center them on each line */
     text-align: center;
-    gap: 14px;
+    gap: 12px 18px;            /* vertical & horizontal spacing */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;               /* so text wraps within screen width */
+  }
+
+  .nav-menu li {
+    flex: 1 1 auto;            /* allow wrapping elements to take space evenly */
+    text-align: center;
   }
 
   .nav-menu li a {
-    font-size: 0.9em;
-    white-space: nowrap;
+    font-size: 0.95em;
+    white-space: normal;       /* ✅ allows words to wrap instead of staying one line */
+    display: inline-block;
+    line-height: 1.4;
   }
 
   /* Buttons appear BELOW the menu, side-by-side */
