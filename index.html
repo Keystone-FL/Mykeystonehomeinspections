@@ -273,47 +273,55 @@ body {
   box-sizing: border-box;
 }
 
-/* === MOBILE FIX — STACK MENU ITEMS, BUTTONS UNDERNEATH === */
+/* === MOBILE FIX — PERFECT CENTERING FOR TWO ROW MENU + BUTTONS === */
 @media (max-width: 768px) {
 
-  /* Wrap menu vertically */
   .nav-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 10px 0;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 0;
   }
 
+  /* ✅ Two centered rows */
   .nav-menu {
     display: flex;
-    flex-direction: column;     /* ✅ stacks items vertically */
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;               /* allows wrapping into multiple rows */
+    justify-content: center;       /* center the content horizontally */
+    align-items: center;           /* center vertically across rows */
     text-align: center;
-    gap: 6px;                   /* small space between items */
-    padding: 0;
-    margin: 0;
+    gap: 10px 18px;                /* row gap / column gap */
+    max-width: 95%;
+    margin: 0 auto;
     list-style: none;
-    width: 100%;
+    padding: 0;
+  }
+
+  .nav-menu li {
+    flex: 0 1 auto;                /* keeps items sized naturally */
+    text-align: center;
   }
 
   .nav-menu li a {
     font-size: 1em;
     text-decoration: none;
-    white-space: normal;
-    display: block;
+    color: #fff;
+    white-space: nowrap;
+    display: inline-block;
   }
 
-  /* Buttons centered UNDER the stacked menu */
+  /* ✅ Buttons under menu — centered */
   .nav-buttons {
     all: unset;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 18px;
+    margin-top: 12px;
     width: 100%;
     text-align: center;
-    margin-top: 10px;
   }
 
   .nav-buttons a {
@@ -331,13 +339,13 @@ body {
     color: #002b5c;
   }
 
-  /* Push logo lower when nav bar grows taller */
+  /* ✅ Lower logo slightly for visual spacing */
   .logo {
     margin-top: 55px;
   }
 
   body {
-    padding-top: 135px; /* extra space below blue bar */
+    padding-top: 135px;
   }
 }
 </style>
