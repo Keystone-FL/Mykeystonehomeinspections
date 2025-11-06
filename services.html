@@ -386,6 +386,62 @@ footer p {
     margin-bottom: 20px;
   }
 }
+
+/* ✅ PRE-LISTING INSPECTIONS SECTION */
+.prelisting-section {
+  background: #ffffff;
+  padding: 80px 8%;
+}
+
+.prelisting-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* image with circular navy glow */
+.prelisting-img img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 43, 92, 0.35);
+  transition: all 0.35s ease;
+}
+
+.prelisting-img img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(0, 43, 92, 0.55);
+}
+
+.prelisting-text {
+  flex: 1 1 480px;
+}
+
+.prelisting-text h2 {
+  color: #002b5c;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.prelisting-text p {
+  font-size: 1.15em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* mobile stacking */
+@media (max-width: 768px) {
+  .prelisting-wrap {
+    flex-direction: column;
+    text-align: left;
+  }
+  .prelisting-img img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
 </style>
 </style>
 </head>
