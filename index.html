@@ -559,6 +559,29 @@ body {
     background-color: #002b5c !important;
   }
 }
+/* === MOBILE FIX: Show image ABOVE text in Meet Thomas section === */
+@media (max-width: 768px) {
+  .meet-wrap {
+    display: flex;
+    flex-direction: column-reverse; /* ⬅️ This moves the image ABOVE the text */
+    align-items: center;
+    text-align: center;
+  }
+
+  .meet-text {
+    order: 2; /* text below */
+  }
+
+  .meet-img {
+    order: 1; /* image above */
+    margin-bottom: 20px;
+  }
+
+  .meet-img img {
+    max-width: 300px;
+    height: auto;
+  }
+}
 </style>
 </head>
 <body>
