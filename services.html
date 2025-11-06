@@ -12,33 +12,139 @@ body {
   color: #000;
 }
 
-/* NAVIGATION (same as homepage) */
+/* === FIXED TOP NAVIGATION === */
 nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background: #002b5c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0;
+  background-color: #002b5c;
+  padding: 22px 0;
   z-index: 1000;
 }
-nav ul {
+
+/* Wraps both menu and buttons */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* keeps menu centered */
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Centered menu */
+.nav-menu {
   list-style: none;
   display: flex;
   gap: 35px;
   margin: 0;
   padding: 0;
 }
-nav ul li a {
-  color: #fff;
+
+.nav-menu li a {
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
-nav ul li a:hover {
+
+.nav-menu li a:hover {
   color: #f2b600;
+}
+
+/* === Right-side buttons for desktop (perfectly aligned) === */
+.nav-buttons {
+  position: absolute;
+  right: -12%;
+  top: 52%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.top-btn {
+  flex-shrink: 0;
+  border: 2px solid #f2b600;
+  color: #f2b600;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.top-btn:hover {
+  background-color: #f2b600;
+  color: #002b5c;
+}
+
+/* === MOBILE NAVIGATION FIX — Centered buttons under menu === */
+@media (max-width: 768px) {
+  .nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav-menu li a {
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+
+  .nav-buttons {
+    all: unset;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important;
+    text-align: center !important;
+    margin-top: 14px !important;
+    order: 99;
+  }
+
+  .nav-buttons a {
+    border: 2px solid #f2b600 !important;
+    color: #f2b600 !important;
+    padding: 10px 22px !important;
+    border-radius: 28px !important;
+    text-decoration: none !important;
+    font-size: 1.1em !important;
+    font-weight: 700 !important;
+  }
+
+  .nav-buttons a:hover {
+    background-color: #f2b600 !important;
+    color: #002b5c !important;
+  }
+
+  body {
+    padding-top: 120px;
+  }
+}
+
+/* Desktop spacing below nav */
+body {
+  padding-top: 85px;
 }
 
 /* HERO IMAGE */
