@@ -543,6 +543,17 @@ body {
     margin: 0 !important;
   }
 }
+/* === DESKTOP FIX: Remove white gap above hero image === */
+@media (min-width: 769px) {
+  .hero {
+    margin-top: 0 !important;      /* remove any vertical space above */
+  }
+
+  body {
+    padding-top: 60px !important;  /* adjust so hero image meets blue bar cleanly */
+    background: #002b5c;           /* ensures no white sliver behind the nav */
+  }
+}
 </style>
 </head>
 <body>
