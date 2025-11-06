@@ -431,6 +431,101 @@ body {
     padding-top: 135px;
   }
 }
+/* === FINAL MOBILE FIX — FORCE STACK + TRUE CENTER === */
+@media (max-width: 768px) {
+
+  /* Make sure nothing is left-anchored */
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;         /* prevent sideways scroll */
+    text-align: center;         /* center inline content */
+  }
+
+  /* NAV wrapper stacks vertically */
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* ✅ Two-line centered nav menu */
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 24px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nav-menu li {
+    flex: 0 1 auto;
+  }
+
+  /* ✅ Force line break after the 4th item */
+  .nav-menu li:nth-child(4)::after {
+    content: "";
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .nav-menu li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1em;
+    white-space: nowrap;
+  }
+
+  /* ✅ Call/Email buttons centered below menu */
+  .nav-buttons {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-buttons a {
+    border: 2px solid #f2b600;
+    color: #f2b600;
+    padding: 10px 22px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  /* ✅ Center logo and hero image correctly */
+  .logo,
+  .hero {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero {
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+
+  body {
+    padding-top: 135px; /* space for nav bar */
+  }
+}
 </style>
 </head>
 <body>
