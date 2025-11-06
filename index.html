@@ -297,10 +297,16 @@ body {
     list-style: none;
     padding: 0;
   }
-
   .nav-menu li {
     flex: 0 1 auto;                /* keeps items sized naturally */
     text-align: center;
+  }
+
+  /* ✅ Force line break after the 4th item for perfect 2-row layout */
+  .nav-menu li:nth-child(4)::after {
+    content: "";
+    flex-basis: 100%;       /* pushes next items to a new line */
+    width: 100%;
   }
 
   .nav-menu li a {
