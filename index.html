@@ -83,11 +83,30 @@ nav {
   color: #002b5c;
 }
 
-/* === MOBILE NAVIGATION ADJUSTMENTS === */
+/* === MOBILE NAVIGATION FIX — centered menu + side-by-side buttons === */
 @media (max-width: 768px) {
-  /* Make sure nav text wraps nicely and scales down */
-   nav .nav-buttons {
-    position: static !important;   /* disables desktop absolute rule */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+
+  /* Buttons below menu — centered side-by-side */
+  .nav-buttons {
+    position: static !important;
     transform: none !important;
     margin-top: 12px;
     display: flex;
@@ -99,58 +118,13 @@ nav {
     text-align: center;
   }
 
-  nav .top-btn {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
-
-  body {
-    padding-top: 115px;
-  }
-
-   /* === MOBILE BUTTONS UNDER MENU (SIDE-BY-SIDE) === */
-  .nav-buttons {
-    position: static;           /* remove absolute positioning */
-    transform: none;            /* disable vertical offset */
-    margin-top: 12px;           /* add space below menu */
-    display: flex;              /* align buttons side by side */
-    justify-content: center;    /* center buttons under menu */
-    align-items: center;
-    gap: 16px;                  /* even space between buttons */
-    width: 100%;
-    flex-wrap: wrap;            /* ensures wrapping on very small phones */
-    text-align: center;
-  }
-
   .top-btn {
     font-size: 1em;
     padding: 10px 20px;
   }
 
   body {
-    padding-top: 115px;         /* keeps logo from being covered */
-  }
-}
-
-  /* Buttons centered below menu */
-  .nav-buttons {
-    position: static;
-    transform: none;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .top-btn {
-    font-size: 1em;
-    padding: 8px 18px;
-  }
-
-  body {
-    padding-top: 95px; /* prevent blue bar from covering logo */
+    padding-top: 115px; /* moves logo down under taller nav */
   }
 }
 
