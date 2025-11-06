@@ -273,33 +273,63 @@ body {
   box-sizing: border-box;
 }
 
-/* === MOBILE STACK FIX FOR BUTTONS & LOGO === */
+/* === MOBILE FIX — Buttons UNDER menu, side-by-side, centered === */
 @media (max-width: 768px) {
-  /* Stack buttons below nav links */
-  .nav-buttons {
-    position: static;
-    transform: none;
+  /* Menu layout */
+  .nav-wrapper {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 10px;
+    padding: 12px 0;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
-    margin-top: 10px;
+    gap: 14px;
   }
 
-  .top-btn {
-    font-size: 1.1em;
-    padding: 10px 22px;
-    margin-bottom: 6px; /* adds small space between buttons */
+  .nav-menu li a {
+    font-size: 0.9em;
+    white-space: nowrap;
   }
 
-  /* Push logo down when nav bar gets taller */
+  /* Buttons appear BELOW the menu, side-by-side */
+  .nav-buttons {
+    all: unset;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 14px !important;
+    order: 99;
+  }
+
+  .nav-buttons a {
+    border: 2px solid #f2b600 !important;
+    color: #f2b600 !important;
+    padding: 10px 22px !important;
+    border-radius: 28px !important;
+    text-decoration: none !important;
+    font-size: 1.1em !important;
+    font-weight: 700 !important;
+  }
+
+  .nav-buttons a:hover {
+    background-color: #f2b600 !important;
+    color: #002b5c !important;
+  }
+
+  /* Push logo lower when nav grows taller */
   .logo {
-    margin-top: 40px; /* increase if still overlapping */
+    margin-top: 55px; /* adjust if still overlapping */
   }
 
   body {
-    padding-top: 120px; /* adds extra breathing room below the blue bar */
+    padding-top: 130px; /* extra room below blue bar */
   }
 }
 </style>
