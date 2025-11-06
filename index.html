@@ -85,43 +85,48 @@ nav {
 
 /* === MOBILE NAVIGATION FIX — Centered buttons under menu === */
 @media (max-width: 768px) {
-  nav {
+  .nav-wrapper {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 12px 0;
   }
 
-  nav ul {
+  .nav-menu {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     gap: 14px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
-  nav ul li a {
+  .nav-menu li a {
     font-size: 0.9em;
     white-space: nowrap;
   }
 
   /* Force Call + Email buttons BELOW the menu, side-by-side */
   .nav-buttons {
-    all: unset;                /* wipes out desktop absolute positioning */
+    all: unset;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     gap: 20px !important;
     width: 100% !important;
-    flex-wrap: nowrap !important; /* keeps side-by-side */
+    flex-wrap: nowrap !important;
     text-align: center !important;
     margin-top: 14px !important;
-    order: 99;                 /* guarantees they render after menu */
+    order: 99;
   }
 
   .nav-buttons a {
     border: 2px solid #f2b600 !important;
     color: #f2b600 !important;
-    padding: 10px 24px !important;
+    padding: 10px 22px !important;
     border-radius: 28px !important;
     text-decoration: none !important;
     font-size: 1.1em !important;
@@ -134,7 +139,7 @@ nav {
   }
 
   body {
-    padding-top: 120px; /* keeps logo visible below tall nav */
+    padding-top: 120px;
   }
 }
 
