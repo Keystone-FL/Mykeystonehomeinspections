@@ -685,18 +685,36 @@ footer p {
   padding-bottom: 10px;
 }
 
-/* Gray form box */
+/* Gray form box – updated for balance and emphasis */
 .form-box {
-  background-color: #f8f8f8;
-  padding: 30px 35px;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background-color: #e9e9e9; /* slightly darker gray */
+  padding: 45px 50px;       /* thicker padding all around */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 520px;          /* slightly larger form area */
+  margin: 0 auto;            /* keeps it centered within its column */
 }
 
 .form-box form {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px; /* more breathing room between fields */
+}
+
+.contact-right {
+  flex: 1 1 480px;           /* increases column width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contact-right h2 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #f2b600;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 .form-box label {
