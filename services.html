@@ -1192,30 +1192,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
   serviceImages.forEach(img => {
     img.addEventListener("click", function(e) {
-      e.preventDefault(); // stop any default jump
+      e.preventDefault();
 
-      const targetId = this.dataset.target;
+      const targetId = this.dataset.target; // example: "specialty"
       const checkbox = document.getElementById(targetId);
       const contactSection = document.getElementById("contact");
 
-      // Smooth scroll to Contact section
+      if (!checkbox || !contactSection) return;
+
+      // Smooth scroll to contact section
       contactSection.scrollIntoView({ behavior: "smooth" });
 
-      // Wait for the scroll animation to finish before checking the box
+      // Wait a bit for scroll to complete and checkbox to render
       setTimeout(() => {
-        if (checkbox) {
-          checkbox.checked = true;
+        checkbox.checked = true;
 
-          // Optional: brief visual cue (gold flash)
-          const formBox = document.querySelector(".form-box");
-          if (formBox) {
-            formBox.style.boxShadow = "0 0 20px 5px rgba(242,182,0,0.6)";
-            setTimeout(() => {
-              formBox.style.boxShadow = "0 2px 12px rgba(0,0,0,0.08)";
-            }, 1000);
-          }
+        // Dispatch an input event to ensure UI updates properly
+        checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+
+        // Optional gold flash around form for visual cue
+        const formBox = document.querySelector(".form-box");
+        if (formBox) {
+          formBox.style.boxShadow = "0 0 20px 5px rgba(242,182,0,0.6)";
+          setTimeout(() => {
+            formBox.style.boxShadow = "0 2px 12px rgba(0,0,0,0.08)";
+          }, 1000);
         }
-      }, 800); // slightly longer delay ensures scroll finishes
+      }, 1000); // ← increased wait time for reliability
     });
   });
 });
