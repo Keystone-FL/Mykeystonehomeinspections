@@ -711,23 +711,26 @@ footer p {
     padding: 60px 6%;
   }
 }
-/* ✅ CONTACT US SECTION */
+/* ✅ CONTACT US SECTION — White Background, Gray Form Panel */
 .contact-section {
-  background-color: #002b5c;
-  color: #ffffff;
+  background-color: #ffffff; /* clean white background */
+  color: #002b5c; /* brand navy text */
   padding: 80px 8%;
   text-align: center;
 }
 
 .contact-section h2 {
-  color: #f2b600;
+  color: #002b5c;
   font-size: 2.2em;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border-bottom: 3px solid #f2b600;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
-/* layout */
+/* Layout */
 .contact-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -762,18 +765,23 @@ footer p {
 }
 
 .contact-info a {
-  color: #f2b600;
+  color: #002b5c;
   text-decoration: none;
   font-weight: bold;
 }
 
 .contact-info a:hover {
+  color: #f2b600;
   text-decoration: underline;
 }
 
 /* RIGHT SIDE FORM */
 .contact-form {
   flex: 1 1 400px;
+  background-color: #f8f8f8; /* light gray form area */
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .contact-form form {
@@ -785,13 +793,14 @@ footer p {
 .contact-form label {
   font-weight: bold;
   font-size: 1em;
+  color: #002b5c;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 12px 14px;
   border-radius: 6px;
-  border: none;
+  border: 1px solid #ccc;
   font-size: 1em;
   width: 100%;
 }
@@ -806,19 +815,25 @@ footer p {
   font-size: 1.1em;
   cursor: pointer;
   transition: all 0.3s;
+  margin-top: 10px;
 }
 
 .contact-btn:hover {
-  background-color: #ffffff;
-  color: #002b5c;
+  background-color: #002b5c;
+  color: #f2b600;
 }
 
-/* mobile responsive */
+/* Mobile responsive */
 @media (max-width: 768px) {
   .contact-wrap {
     flex-direction: column;
     text-align: left;
   }
+
+  .contact-form {
+    padding: 25px;
+  }
+
   .contact-section {
     padding: 60px 6%;
   }
