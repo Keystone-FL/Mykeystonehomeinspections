@@ -711,73 +711,69 @@ footer p {
     padding: 60px 6%;
   }
 }
-/* ✅ CONTACT US SECTION — Two Column Layout */
+/* ✅ COMPACT SIDE-BY-SIDE CONTACT SECTION */
 .contact-section {
   background-color: #ffffff;
   color: #002b5c;
   padding: 80px 8%;
 }
 
-.contact-wrap {
+.contact-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 60px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* LEFT COLUMN INFO */
-.contact-info {
-  flex: 1 1 420px;
+/* LEFT COLUMN */
+.contact-left {
+  flex: 1 1 400px;
   text-align: left;
 }
 
-.contact-info .intro {
+.contact-left .intro {
   font-size: 1.2em;
   line-height: 1.7;
   margin-bottom: 25px;
   font-weight: 600;
-  color: #002b5c;
 }
 
-.contact-info ul {
+.contact-left ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   font-size: 1.05em;
   line-height: 1.8;
 }
 
-.contact-info li {
-  margin-bottom: 10px;
+.contact-left li {
+  margin-bottom: 12px;
 }
 
-.contact-info a {
+.contact-left a {
   color: #002b5c;
   text-decoration: none;
   font-weight: bold;
 }
 
-.contact-info a:hover {
+.contact-left a:hover {
   color: #f2b600;
   text-decoration: underline;
 }
 
-/* RIGHT COLUMN FORM */
-.contact-form {
-  flex: 1 1 420px;
-  background-color: #f8f8f8;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+/* RIGHT COLUMN */
+.contact-right {
+  flex: 1 1 400px;
   text-align: left;
 }
 
-.contact-form h2 {
+.contact-right h2 {
   color: #002b5c;
   font-size: 2em;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-bottom: 3px solid #f2b600;
@@ -785,20 +781,28 @@ footer p {
   padding-bottom: 10px;
 }
 
-.contact-form form {
+/* Gray form box */
+.form-box {
+  background-color: #f8f8f8;
+  padding: 30px 35px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-box form {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-.contact-form label {
+.form-box label {
   font-weight: bold;
   font-size: 1em;
   color: #002b5c;
 }
 
-.contact-form input,
-.contact-form textarea {
+.form-box input,
+.form-box textarea {
   padding: 12px 14px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -824,18 +828,13 @@ footer p {
   color: #f2b600;
 }
 
-/* MOBILE LAYOUT */
+/* MOBILE VIEW */
 @media (max-width: 768px) {
-  .contact-wrap {
+  .contact-container {
     flex-direction: column;
   }
 
-  .contact-info,
-  .contact-form {
-    width: 100%;
-  }
-
-  .contact-form {
+  .contact-right {
     margin-top: 30px;
   }
 }
