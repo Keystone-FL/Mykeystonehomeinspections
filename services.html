@@ -1182,6 +1182,26 @@ footer p {
   <p>(561) 596-6083 • MyKeystoneInspections@gmail.com</p>
   <p>Licensed Florida Home Inspector #HI18259 • Licensed & Insured</p>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const serviceImages = document.querySelectorAll(".service-link");
 
+  serviceImages.forEach(img => {
+    img.addEventListener("click", function() {
+      const targetId = this.dataset.target;
+      const checkbox = document.getElementById(targetId);
+
+      // Scroll smoothly to Contact section
+      const contactSection = document.getElementById("contact");
+      contactSection.scrollIntoView({ behavior: "smooth" });
+
+      // Wait a bit for scroll, then check the box
+      setTimeout(() => {
+        if (checkbox) checkbox.checked = true;
+      }, 600);
+    });
+  });
+});
+</script>
 </body>
 </html>
