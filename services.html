@@ -711,26 +711,13 @@ footer p {
     padding: 60px 6%;
   }
 }
-/* ✅ CONTACT US SECTION — White Background, Gray Form Panel */
+/* ✅ CONTACT US SECTION — Two Column Layout */
 .contact-section {
-  background-color: #ffffff; /* clean white background */
-  color: #002b5c; /* brand navy text */
-  padding: 80px 8%;
-  text-align: center;
-}
-
-.contact-section h2 {
+  background-color: #ffffff;
   color: #002b5c;
-  font-size: 2.2em;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 3px solid #f2b600;
-  display: inline-block;
-  padding-bottom: 10px;
+  padding: 80px 8%;
 }
 
-/* Layout */
 .contact-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -739,18 +726,20 @@ footer p {
   gap: 60px;
   max-width: 1100px;
   margin: 0 auto;
-  text-align: left;
 }
 
-/* LEFT SIDE INFO */
+/* LEFT COLUMN INFO */
 .contact-info {
-  flex: 1 1 400px;
+  flex: 1 1 420px;
+  text-align: left;
 }
 
 .contact-info .intro {
   font-size: 1.2em;
   line-height: 1.7;
   margin-bottom: 25px;
+  font-weight: 600;
+  color: #002b5c;
 }
 
 .contact-info ul {
@@ -775,13 +764,25 @@ footer p {
   text-decoration: underline;
 }
 
-/* RIGHT SIDE FORM */
+/* RIGHT COLUMN FORM */
 .contact-form {
-  flex: 1 1 400px;
-  background-color: #f8f8f8; /* light gray form area */
-  padding: 30px 40px;
+  flex: 1 1 420px;
+  background-color: #f8f8f8;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.contact-form h2 {
+  color: #002b5c;
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #f2b600;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 .contact-form form {
@@ -823,19 +824,19 @@ footer p {
   color: #f2b600;
 }
 
-/* Mobile responsive */
+/* MOBILE LAYOUT */
 @media (max-width: 768px) {
   .contact-wrap {
     flex-direction: column;
-    text-align: left;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
   }
 
   .contact-form {
-    padding: 25px;
-  }
-
-  .contact-section {
-    padding: 60px 6%;
+    margin-top: 30px;
   }
 }
 </style>
