@@ -675,6 +675,7 @@ footer p {
   text-align: center; /* centers the heading */
 }
 
+/* === CONTACT US HEADER (centered with short gold line) === */
 .contact-right h2 {
   color: #002b5c;
   font-size: 2em;
@@ -684,10 +685,10 @@ footer p {
   border-bottom: 3px solid #f2b600;
   display: inline-block;
   padding-bottom: 8px;
-  border-width: 3px;
-  border-color: #f2b600;
-  border-bottom-style: solid;
-  width: auto;           /* make line as long as text */
+  width: auto;              /* underline matches text width */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Keep the form centered under heading */
 .form-box {
@@ -737,20 +738,22 @@ footer p {
   width: 100%;
 }
 
-/* Smaller, refined send-message button */
+/* === SEND MESSAGE BUTTON (taller, bolder, centered, shorter width) === */
 .contact-btn {
   background-color: #f2b600;
   color: #002b5c;
   font-weight: bold;
   border: none;
-  padding: 8px 18px;     /* smaller overall */
+  padding: 14px 28px;       /* taller */
   border-radius: 6px;
-  font-size: 0.95em;
+  font-size: 1.15em;        /* slightly larger text */
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 15px;
   display: inline-block;
-  width: auto;           /* shrink to text size */
+  width: auto;              /* only as wide as text */
+  text-align: center;
+  white-space: nowrap;
 }
 
 .contact-btn:hover {
