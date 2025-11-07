@@ -548,6 +548,62 @@ footer p {
     margin-bottom: 20px;
   }
 }
+/* ✅ SPECTORA REPORTS SECTION */
+.spectora-section {
+  background: #f8f8f8;
+  padding: 80px 8%;
+}
+
+.spectora-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* image styling */
+.spectora-img img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 43, 92, 0.35); /* soft navy glow */
+  transition: all 0.35s ease;
+}
+
+.spectora-img img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(0, 43, 92, 0.55);
+}
+
+/* text styling */
+.spectora-text {
+  flex: 1 1 480px;
+}
+
+.spectora-text h2 {
+  color: #002b5c;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.spectora-text p {
+  font-size: 1.15em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* mobile stacking */
+@media (max-width: 768px) {
+  .spectora-wrap {
+    flex-direction: column;
+    text-align: left;
+  }
+  .spectora-img img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
 </style>
 </head>
 <body>
@@ -714,6 +770,28 @@ footer p {
     </div>
   </div>
 </section>
+<!-- SPECTORA REPORTS SECTION -->
+<section class="spectora-section" id="spectora">
+  <div class="spectora-wrap">
+    <div class="spectora-img">
+      <img src="images/Spectora 1.png" alt="Spectora Home Inspection Report">
+    </div>
+
+    <div class="spectora-text">
+      <h2>Professional, Modern Inspection Reports</h2>
+      <p>
+        At <strong>Keystone Home Inspections</strong>, we use <strong>Spectora</strong>, one of the industry’s leading
+        home inspection reporting platforms. Our reports are clear, comprehensive, and easy to navigate — featuring
+        high-resolution photos, embedded videos, and detailed explanations of every finding.
+      </p>
+      <p>
+        You’ll receive your report quickly, in a modern digital format that looks great on any device, allowing you to
+        review, share, and make informed decisions with complete confidence.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- SPECIALTY INSPECTIONS -->
 <section class="specialty-section" id="specialty">
   <h2>Specialty Inspections</h2>
