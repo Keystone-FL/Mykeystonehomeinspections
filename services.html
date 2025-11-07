@@ -1191,18 +1191,31 @@ document.addEventListener("DOMContentLoaded", function() {
   const serviceImages = document.querySelectorAll(".service-link");
 
   serviceImages.forEach(img => {
-    img.addEventListener("click", function() {
+    img.addEventListener("click", function(e) {
+      e.preventDefault(); // stop any default jump
+
       const targetId = this.dataset.target;
       const checkbox = document.getElementById(targetId);
+      const contactSection = document.getElementById("contact");
 
       // Smooth scroll to Contact section
-      const contactSection = document.getElementById("contact");
       contactSection.scrollIntoView({ behavior: "smooth" });
 
-      // Automatically check the corresponding box
+      // Wait for the scroll animation to finish before checking the box
       setTimeout(() => {
-        if (checkbox) checkbox.checked = true;
-      }, 600);
+        if (checkbox) {
+          checkbox.checked = true;
+
+          // Optional: brief visual cue (gold flash)
+          const formBox = document.querySelector(".form-box");
+          if (formBox) {
+            formBox.style.boxShadow = "0 0 20px 5px rgba(242,182,0,0.6)";
+            setTimeout(() => {
+              formBox.style.boxShadow = "0 2px 12px rgba(0,0,0,0.08)";
+            }, 1000);
+          }
+        }
+      }, 800); // slightly longer delay ensures scroll finishes
     });
   });
 });
