@@ -846,6 +846,57 @@ footer p {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
+  
+/* ✅ RESIDENTIAL HOME INSPECTIONS */
+.residential-section {
+  background: #ffffff;
+  padding: 80px 8%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.residential-section .text-content {
+  flex: 1 1 480px;
+}
+
+.residential-section .text-content h2 {
+  color: #002b5c;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.residential-section .text-content p {
+  font-size: 1.15em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.residential-section .image-content img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.residential-section .image-content img:hover {
+  transform: scale(1.02);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .residential-section {
+    flex-direction: column;
+    text-align: left;
+  }
+  .residential-section .image-content img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
 
 </style>
 </head>
