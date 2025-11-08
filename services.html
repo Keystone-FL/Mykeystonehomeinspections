@@ -1271,38 +1271,45 @@ footer p {
   <p>Licensed Florida Home Inspector #HI18259 • Licensed & Insured</p>
 </footer>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const serviceImages = document.querySelectorAll(".service-link");
+document.addEventListener("DOMContentLoaded", function () {
+  // Select both the images AND overlays
+  const clickableElements = document.querySelectorAll(".service-link, .service-overlay");
 
-  serviceImages.forEach(img => {
-    img.addEventListener("click", function(e) {
+  clickableElements.forEach((el) => {
+    el.addEventListener("click", function (e) {
       e.preventDefault();
 
-      const targetId = this.dataset.target; // example: "specialty"
+      // If the element is the overlay, find the previous image sibling
+      const img = el.classList.contains("service-overlay")
+        ? el.previousElementSibling
+        : el;
+
+      // Get target from the image
+      const targetId = img?.dataset?.target;
+      if (!targetId) return;
+
       const checkbox = document.getElementById(targetId);
       const contactSection = document.getElementById("contact");
 
       if (!checkbox || !contactSection) return;
 
-      // Smooth scroll to contact section
+      // Scroll to contact form
       contactSection.scrollIntoView({ behavior: "smooth" });
 
-      // Wait a bit for scroll to complete and checkbox to render
+      // Wait, then check the correct box
       setTimeout(() => {
         checkbox.checked = true;
+        checkbox.dispatchEvent(new Event("change", { bubbles: true }));
 
-        // Dispatch an input event to ensure UI updates properly
-        checkbox.dispatchEvent(new Event('change', { bubbles: true }));
-
-        // Optional gold flash around form for visual cue
+        // Highlight form briefly for feedback
         const formBox = document.querySelector(".form-box");
         if (formBox) {
           formBox.style.boxShadow = "0 0 20px 5px rgba(242,182,0,0.6)";
           setTimeout(() => {
-            formBox.style.boxShadow = "0 2px 12px rgba(0,0,0,0.08)";
-          }, 1000);
+            formBox.style.boxShadow = "0 4px 16px rgba(0,0,0,0.12)";
+          }, 1200);
         }
-      }, 1000); // ← increased wait time for reliability
+      }, 900);
     });
   });
 });
