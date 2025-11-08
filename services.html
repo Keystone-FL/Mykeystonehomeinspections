@@ -764,7 +764,7 @@ footer p {
   color: #f2b600;
 }
 
-/* === Elegant gold overlay text on service images === */
+/* === Elegant gold overlay on service images (final version) === */
 .service-img-wrapper {
   position: relative;
   display: inline-block;
@@ -778,22 +778,23 @@ footer p {
   border-radius: 12px;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 0;
 }
 
 .service-img-wrapper:hover img {
   transform: scale(1.02);
 }
 
-/* gold overlay bar */
+/* Overlay bar that slides up from bottom */
 .service-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(242, 182, 0, 0.9); /* Keystone gold tone */
+  background: rgba(242, 182, 0, 0.92); /* Keystone gold */
   color: #002b5c;
   text-align: center;
-  padding: 12px 0;
+  padding: 14px 0;
   font-weight: bold;
   font-size: 1.05em;
   text-transform: uppercase;
@@ -801,9 +802,13 @@ footer p {
   opacity: 0;
   transform: translateY(100%);
   transition: all 0.35s ease;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 2; /* ensures overlay stays on top of image */
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
 }
 
-/* hover reveal effect */
+/* Show overlay on hover */
 .service-img-wrapper:hover .service-overlay {
   opacity: 1;
   transform: translateY(0);
