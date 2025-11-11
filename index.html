@@ -86,6 +86,8 @@ nav {
     gap: 10px;
     padding: 12px 0;
   }
+}
+
 /* === FINAL MOBILE FIX: put Meet Thomas image above text === */
 @media only screen and (max-width: 768px) {
   /* Force this rule to override everything above */
@@ -404,6 +406,41 @@ body {
     justify-content: center;
     gap: 10px;
   }
+}
+
+/* === FINAL MOBILE FIX: put Meet Thomas image above text === */
+@media only screen and (max-width: 768px) {
+  /* Force this rule to override everything above */
+  .meet-wrap {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .meet-text {
+    order: 2 !important;
+    text-align: center !important;
+    padding: 0 20px !important;
+  }
+
+  .meet-img {
+    order: 1 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .meet-img img {
+    max-width: 90% !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+    border-radius: 10px !important;
+  }
+}
 
   /* ✅ Force 2-row grouped layout */
   .nav-menu {
@@ -483,6 +520,52 @@ body {
     overflow-x: hidden;         /* prevent sideways scroll */
     text-align: center;         /* center inline content */
   }
+}
+
+/* === MOBILE FIX — EXACT 2-ROW NAV + CENTERED BUTTONS === */
+@media (max-width: 768px) {
+  /* Make sure the wrapper stacks vertically */
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* === FINAL MOBILE FIX: put Meet Thomas image above text === */
+@media only screen and (max-width: 768px) {
+  /* Force this rule to override everything above */
+  .meet-wrap {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .meet-text {
+    order: 2 !important;
+    text-align: center !important;
+    padding: 0 20px !important;
+  }
+
+  .meet-img {
+    order: 1 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .meet-img img {
+    max-width: 90% !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+    border-radius: 10px !important;
+  }
+}
 
   /* NAV wrapper stacks vertically */
   .nav-wrapper {
@@ -604,6 +687,52 @@ body {
     gap: 20px !important;
     width: 100%;
   }
+}
+
+/* === MOBILE FIX — EXACT 2-ROW NAV + CENTERED BUTTONS === */
+@media (max-width: 768px) {
+  /* Make sure the wrapper stacks vertically */
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* === FINAL MOBILE FIX: put Meet Thomas image above text === */
+@media only screen and (max-width: 768px) {
+  /* Force this rule to override everything above */
+  .meet-wrap {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .meet-text {
+    order: 2 !important;
+    text-align: center !important;
+    padding: 0 20px !important;
+  }
+
+  .meet-img {
+    order: 1 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .meet-img img {
+    max-width: 90% !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+    border-radius: 10px !important;
+  }
+}
 
   .meet-img {
     order: -1 !important;
