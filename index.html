@@ -759,6 +759,34 @@ body {
     padding: 0 20px;
   }
 }
+/* === Mobile layout fix for staggered sections (forces image ABOVE text) === */
+@media (max-width: 768px) {
+  .meet-wrap {
+    flex-direction: column-reverse !important; /* 👈 put image above text */
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .meet-img {
+    order: -1 !important; /* ensures image comes first even if flex-row-reverse is set */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .meet-img img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  .meet-text {
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+
 </style>
 </head>
 <body>
