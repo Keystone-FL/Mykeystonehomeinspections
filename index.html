@@ -737,6 +737,27 @@ body {
     margin-top: 30px;
   }
 }
+@media (max-width: 768px) {
+  /* === Mobile Fix: Put Thomas Cathcart image ABOVE text === */
+  .meet-wrap {
+    display: flex;
+    flex-direction: column-reverse; /* 👈 moves image above text */
+    align-items: center;
+    text-align: center;
+  }
+
+  .meet-img img {
+    max-width: 90%;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .meet-text {
+    text-align: center;
+    padding: 0 20px;
+  }
+}
 </style>
 </head>
 <body>
