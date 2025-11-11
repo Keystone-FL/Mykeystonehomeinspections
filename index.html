@@ -213,9 +213,13 @@ body {
 .about-text{flex:1 1 400px;}
 .about-text h2{color:#002b5c;font-size:2em;margin-bottom:15px;}
 .about-text p{font-size:1.15em;line-height:1.6;margin-bottom:25px;}
-.meet-wrap{
-  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
-  gap:50px;padding:80px 8%;
+.meet-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 80px 8%;
+  flex-direction: row-reverse; /* 👈 this makes the image appear on the RIGHT for desktop */
 }
 .meet-text{flex:1 1 400px;}
 .meet-text h2{color:#002b5c;font-size:2em;margin-bottom:15px;}
