@@ -758,6 +758,34 @@ body {
     padding: 0 20px;
   }
 }
+/* === Mobile fix: Stack "Meet Thomas Cathcart" image ABOVE text === */
+@media (max-width: 768px) {
+  .meet-wrap {
+    display: flex !important;
+    flex-direction: column-reverse !important; /* 👈 this flips order so image shows above text */
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px;
+  }
+
+  .meet-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .meet-img img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+  }
+
+  .meet-text {
+    text-align: center;
+    padding: 0 20px;
+  }
+}
 </style>
 </head>
 <body>
