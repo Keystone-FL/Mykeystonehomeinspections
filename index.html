@@ -778,36 +778,50 @@ At Keystone Home Inspections, my goal is simple: to serve every client with hone
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact" style="background:#002b5c;color:#fff;padding:80px 10%;text-align:center;">
-  <h2 style="color:#f2b600;font-size:2em;margin-bottom:25px;">Contact Us</h2>
-  <form action="https://formspree.io/f/xdkpwbvp" method="POST" style="max-width:700px;margin:0 auto;text-align:left;">
-    <label>Full Name</label><br>
-    <input type="text" name="name" required style="width:100%;padding:12px;margin:8px 0;border:none;border-radius:4px;">
-    <label>Address</label><br>
-    <input type="text" name="address" style="width:100%;padding:12px;margin:8px 0;border:none;border-radius:4px;">
-    <label>Email</label><br>
-    <input type="email" name="email" required style="width:100%;padding:12px;margin:8px 0;border:none;border-radius:4px;">
-    <label>Phone Number</label><br>
-    <input type="text" name="phone" style="width:100%;padding:12px;margin:8px 0;border:none;border-radius:4px;">
-    <label>Message or Inquiry</label><br>
-    <textarea name="message" rows="5" style="width:100%;padding:12px;margin:8px 0;border:none;border-radius:4px;"></textarea>
+<!-- CONTACT US SECTION -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
 
-    <div style="text-align:center;margin-top:20px;">
-      <button type="submit" 
-        style="background:#f2b600;color:#002b5c;border:none;border-radius:6px;
-        padding:14px 30px;font-size:1.1em;font-weight:bold;cursor:pointer;
-        transition:.3s;">Send Message</button>
+    <!-- LEFT SIDE: TEXT INFO -->
+    <div class="contact-left">
+      <p class="intro">
+        <strong>Have questions or ready to schedule your inspection?</strong><br>
+        Our team is here to help — reach out today!
+      </p>
+
+      <ul>
+        <li><strong>📍 Address:</strong> Jupiter, Florida</li>
+        <li><strong>📞 Phone:</strong> <a href="tel:15615966083">(561) 596-6083</a></li>
+        <li><strong>✉️ Email:</strong> <a href="mailto:MyKeystoneInspections@gmail.com">MyKeystoneInspections@gmail.com</a></li>
+        <li><strong>🕒 Hours:</strong> Monday–Saturday • 8:00 AM – 6:00 PM</li>
+      </ul>
     </div>
 
-    <p style="max-width:700px;margin:25px auto 0 auto;font-size:1.1em;line-height:1.6;color:#f2f2f2;text-align:justify;">
-      A member of the <strong>Keystone Home Inspections</strong> team will reach out to you shortly.  
-      Whether you’re buying, selling, or ensuring your home’s safety, our certified professionals  
-      are here to answer your questions and schedule your inspection at your convenience.  
-      Thank you for trusting Keystone — your peace of mind starts here.
-    </p>
+    <!-- RIGHT SIDE: CONTACT FORM BOX -->
+    <div class="contact-right">
+      <h2>Contact Us</h2>
+      <div class="form-box">
+        <form action="https://formspree.io/f/xdkpwbvp" method="POST">
+          <input type="hidden" name="_subject" value="New Message from Homepage">
 
-  </form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" required>
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- FOOTER -->
