@@ -36,15 +36,16 @@ nav {
   margin: 0 auto;
 }
 
-/* Centered menu */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 35px;
-  margin: 0;
-  padding: 0;
+/* === DESKTOP NAVIGATION ONLY — prevents override of mobile nav === */
+@media (min-width: 769px) {
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+  }
 }
-
 .nav-menu li a {
   color: #ffffff;
   text-decoration: none;
