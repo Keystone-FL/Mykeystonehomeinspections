@@ -86,7 +86,7 @@ nav {
   color: #002b5c;
 }
 
-/* === MOBILE NAVIGATION — CLEAN RESET === */
+/* === MOBILE NAVIGATION — EXACT MATCH TO INDEX.HTML === */
 @media (max-width: 768px) {
 
   nav {
@@ -102,29 +102,30 @@ nav {
     gap: 10px;
   }
 
-  /* All menu items centered and evenly spaced */
+  /* TOP NAV MENU — EXACT ROW MATCH */
   .nav-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 16px 26px;
+    text-align: center;
+    gap: 10px 24px;     /* identical spacing to index.html */
     padding: 0;
-    margin: 0;
-    list-style: none;
+    margin: 0 auto;
     max-width: 95%;
+    list-style: none;
   }
 
-  /* ⭐ STEP 2: Add this EXACTLY here */
+  /* ⭐ FORCE BREAK AFTER 4 ITEMS → ROW 1 ends here */
   .nav-menu li:nth-child(4)::after {
     content: "";
     flex-basis: 100%;
     width: 100%;
   }
 
+  /* Links */
   .nav-menu li {
     flex: 0 1 auto;
-    text-align: center;
   }
 
   .nav-menu li a {
@@ -135,29 +136,25 @@ nav {
     white-space: nowrap;
   }
 
-  .nav-menu li a:hover {
-    color: #f2b600;
-  }
-
-  /* Phone + Email buttons under menu, centered */
+  /* PHONE + EMAIL BUTTONS (Row 3) */
   .nav-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 22px;
-    width: 100%;
-    margin-top: 8px;
-    flex-wrap: nowrap;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 20px !important;
+    margin-top: 14px !important;
+    width: 100% !important;
+    text-align: center !important;
   }
 
   .nav-buttons a {
     border: 2px solid #f2b600;
     color: #f2b600;
-    background: transparent;
-    padding: 10px 24px;
-    border-radius: 30px;
+    padding: 10px 22px;
+    border-radius: 28px;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1.1em;
     text-decoration: none;
     white-space: nowrap;
   }
@@ -167,6 +164,7 @@ nav {
     color: #002b5c;
   }
 
+  /* So nav does not overlap hero section */
   body {
     padding-top: 150px;
   }
