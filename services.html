@@ -939,6 +939,18 @@ footer p {
     flex-direction: column-reverse;
   }
 }
+/* ★ Reduce large white gap on mobile for Residential Home Inspections */
+@media (max-width: 768px) {
+  .residential-section {
+    padding-top: 30px !important;   /* was 80px — too large on mobile */
+    padding-bottom: 40px !important;
+  }
+
+  .residential-section .image-content img {
+    margin-bottom: 8px !important;  /* was 20px */
+  }
+}
+
 </style>
 </head>
 <body>
