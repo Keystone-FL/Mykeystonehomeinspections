@@ -15,7 +15,7 @@ body {
   color: #000;
 }
 
-/* === FIXED TOP NAVIGATION === */
+/* === FIXED TOP NAVIGATION — EXACT MATCH FROM INDEX.HTML === */
 nav {
   position: fixed;
   top: 0;
@@ -30,22 +30,21 @@ nav {
 .nav-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center; /* keeps menu centered */
+  justify-content: center;
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* === DESKTOP NAVIGATION ONLY — prevents override of mobile nav === */
-@media (min-width: 769px) {
-  .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-    margin: 0;
-    padding: 0;
-  }
+/* Centered menu (desktop) */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
 }
+
 .nav-menu li a {
   color: #ffffff;
   text-decoration: none;
@@ -57,7 +56,7 @@ nav {
   color: #f2b600;
 }
 
-/* === Right-side buttons for desktop (perfectly aligned) === */
+/* Desktop right-side buttons */
 .nav-buttons {
   position: absolute;
   right: -12%;
@@ -95,58 +94,54 @@ nav {
   }
 
   .nav-wrapper {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
     gap: 10px;
+    width: 100%;
   }
 
-  /* TOP NAV MENU — EXACT ROW MATCH */
   .nav-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    gap: 10px 24px;     /* identical spacing to index.html */
+    gap: 10px 24px;
     padding: 0;
     margin: 0 auto;
-    max-width: 95%;
     list-style: none;
+    max-width: 95%;
   }
 
-  /* ⭐ FORCE BREAK AFTER 4 ITEMS → ROW 1 ends here */
+  /* Force row break after 4 items */
   .nav-menu li:nth-child(4)::after {
     content: "";
     flex-basis: 100%;
     width: 100%;
   }
 
-  /* Links */
   .nav-menu li {
     flex: 0 1 auto;
   }
 
   .nav-menu li a {
-    color: #ffffff;
-    font-weight: 700;
     font-size: 1em;
+    font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
+    color: #ffffff;
   }
 
-  /* PHONE + EMAIL BUTTONS (Row 3) */
+  /* Phone + Email buttons */
   .nav-buttons {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-wrap: nowrap !important;
-    gap: 20px !important;
-    margin-top: 14px !important;
-    width: 100% !important;
-    text-align: center !important;
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: 100%;
+    margin-top: 14px;
+    text-align: center;
   }
 
   .nav-buttons a {
@@ -165,9 +160,8 @@ nav {
     color: #002b5c;
   }
 
-  /* So nav does not overlap hero section */
   body {
-    padding-top: 150px;
+    padding-top: 135px;
   }
 }
 
