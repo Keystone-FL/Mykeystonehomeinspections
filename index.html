@@ -796,7 +796,41 @@ body {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
+/* === ACCESSIBILITY HELPERS === */
 
+/* Skip link (appears when tabbed to) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 14px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  z-index: 5000;
+}
+.skip-link:focus {
+  left: 10px;
+}
+
+/* Make keyboard focus clearly visible site-wide */
+:focus-visible {
+  outline: 3px solid #f2b600;
+  outline-offset: 3px;
+}
+
+/* Custom checkbox: show focus on the visible box */
+.checkbox-item input:focus-visible ~ .checkmark {
+  outline: 3px solid #f2b600;
+  outline-offset: 3px;
+}
+
+/* Respect reduced motion preference (helps ADA accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none !important; }
+  * { scroll-behavior: auto !important; }
+}
 </style>
 </head>
 <body>
