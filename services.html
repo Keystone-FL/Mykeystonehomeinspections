@@ -991,7 +991,47 @@ footer p {
     margin-top: 10px !important;
   }
 }
+/* === ACCESSIBILITY HELPERS === */
 
+/* Skip link (appears when tabbed to) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 14px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  z-index: 5000;
+}
+.skip-link:focus {
+  left: 10px;
+}
+
+/* Make keyboard focus clearly visible site-wide */
+:focus-visible {
+  outline: 3px solid #f2b600;
+  outline-offset: 3px;
+}
+
+/* Make overlay “button” focusable (see fix #4) */
+.service-overlay:focus-visible {
+  outline: 3px solid #f2b600;
+  outline-offset: 3px;
+}
+
+/* Custom checkbox: show focus on the visible box */
+.checkbox-item input:focus-visible ~ .checkmark {
+  outline: 3px solid #f2b600;
+  outline-offset: 3px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+  .service-img-wrapper img { transition: none !important; }
+}
 </style>
 </head>
 <body>
