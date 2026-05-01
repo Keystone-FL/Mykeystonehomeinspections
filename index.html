@@ -621,7 +621,7 @@ body {
 @media (max-width: 768px) {
   .meet-wrap {
     display: flex !important;
-    flex-direction: column !important; /* ✅ stack image above text */
+    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
@@ -646,6 +646,17 @@ body {
   .meet-text {
     text-align: center !important;
     padding: 0 20px !important;
+  }
+
+  .meet-text h2,
+  .meet-text h3,
+  .meet-text p {
+    text-align: center !important;
+  }
+
+  .meet-text a.button {
+    display: inline-block;
+    margin: 20px auto 0 auto;
   }
 }
 /* ✅ CONTACT US SECTION (White background + gray box) */
