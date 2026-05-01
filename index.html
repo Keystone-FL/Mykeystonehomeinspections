@@ -617,7 +617,7 @@ body {
   }
 }
 
-/* === MOBILE FIX: Force image ABOVE text for Meet Thomas Cathcart section === */
+/* === MOBILE FIX: Meet Thomas section centered === */
 @media (max-width: 768px) {
   .meet-wrap {
     display: flex !important;
@@ -626,41 +626,50 @@ body {
     justify-content: center !important;
     text-align: center !important;
     gap: 20px !important;
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 45px 20px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
   }
 
   .meet-img {
     order: -1 !important;
-    width: 100%;
+    width: 100% !important;
     display: flex !important;
     justify-content: center !important;
   }
 
   .meet-img img {
-    max-width: 90% !important;
-    height: auto;
-    margin-bottom: 15px !important;
-    border-radius: 10px;
+    width: 90% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    margin: 0 auto 15px auto !important;
+    border-radius: 10px !important;
+    display: block !important;
   }
 
   .meet-text {
-    flex: unset !important;        /* 🔥 key fix */
+    flex: none !important;
     width: 100% !important;
-    max-width: 100% !important;
-    text-align: center !important;
-    padding: 0 20px !important;
+    max-width: 520px !important;
     margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
   }
 
   .meet-text h2,
   .meet-text h3,
   .meet-text p {
     text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .meet-text a.button {
-    display: inline-block;
-    margin: 20px auto 0 auto;
+    display: inline-block !important;
+    margin: 20px auto 0 auto !important;
   }
 }
 /* ✅ CONTACT US SECTION (White background + gray box) */
