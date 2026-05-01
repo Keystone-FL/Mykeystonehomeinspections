@@ -942,17 +942,36 @@ body {
 
 @media (max-width: 768px) {
   .why-keystone {
-    padding: 60px 6%;
+    padding: 35px 6% 45px 6% !important;
   }
 
   .why-keystone-wrap {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
+    flex-direction: column !important;
+    gap: 18px !important;
+    text-align: center !important;
+  }
+
+  .why-keystone-img,
+  .why-keystone-text {
+    flex: 0 1 auto !important;
+    width: 100% !important;
+  }
+
+  .why-keystone-img img {
+    display: block !important;
+    margin: 0 auto !important;
   }
 
   .why-keystone-text {
-    text-align: center;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    text-align: center !important;
+  }
+
+  .why-keystone-text h2 {
+    margin-top: 8px !important;
+    margin-bottom: 15px !important;
+    font-size: 2em !important;
   }
 }
 </style>
