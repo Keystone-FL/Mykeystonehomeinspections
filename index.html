@@ -53,32 +53,45 @@ nav {
   color: #f2b600;
 }
 
-.nav-logo {
-  position: absolute;
-  left: -12%;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+/* === DESKTOP LOGO BRANDING === */
+@media (min-width: 769px) {
+  .nav-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
 
-.nav-logo img {
-  height: 85px;   /* was 68px */
-  width: auto;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
-}
+  .nav-logo img {
+    height: 70px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+  }
 
-.nav-logo span {
-  color: #ffffff;
-  font-size: 1.35em;   /* bigger */
-  font-weight: 800;    /* stronger */
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.4); /* subtle pop */
-}
-.nav-logo span strong {
-  font-weight: 900;
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .logo-main {
+    color: #ffffff;
+    font-size: 1.6em;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .logo-sub {
+    color: #f2b600;
+    font-size: 0.95em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
 }
 /* === Right-side buttons for desktop (perfectly aligned) === */
 .nav-buttons {
