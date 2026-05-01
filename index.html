@@ -496,7 +496,6 @@ body {
     padding-top: 135px;
   }
 }
-/* === FINAL MOBILE FIX — FORCE STACK + TRUE CENTER === */
 @media (max-width: 768px) {
 
   /* Make sure nothing is left-anchored */
@@ -504,18 +503,57 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;         /* prevent sideways scroll */
-    text-align: center;         /* center inline content */
-  #areas iframe {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 350px;
-  display: block;
-  margin: 0 auto;
-  border: none;
-}
+    overflow-x: hidden;
+    text-align: center;
   }
 
+  #areas iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 350px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+  }
+
+  .contact-section {
+    padding: 45px 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-box {
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    padding: 25px 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-box input,
+  .form-box textarea {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
   /* NAV wrapper stacks vertically */
   .nav-wrapper {
     flex-direction: column;
