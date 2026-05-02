@@ -1058,7 +1058,39 @@ body {
     margin: 0 auto !important;
   }
 }
+/* === MOBILE ONLY: Shrink blue nav bar after desktop logo enlargement === */
+@media (max-width: 768px) {
+  nav {
+    padding: 18px 0 !important;
+  }
 
+  .nav-wrapper {
+    padding: 10px 0 12px 0 !important;
+    gap: 8px !important;
+  }
+
+  .nav-menu {
+    gap: 8px 22px !important;
+  }
+
+  .nav-menu li a {
+    font-size: 1em !important;
+  }
+
+  .nav-buttons {
+    margin-top: 10px !important;
+    gap: 14px !important;
+  }
+
+  .nav-buttons a {
+    padding: 8px 18px !important;
+    font-size: 1em !important;
+  }
+
+  body {
+    padding-top: 160px !important;
+  }
+}
 </style>
 
 <!-- Google tag (gtag.js) -->
