@@ -1124,8 +1124,17 @@ appearance: none;
   .hero-divider {
     width: 100%;
     max-width: 360px;
-    gap: 14px;
+    gap: 12px;
     margin-bottom: 24px;
+    justify-content: flex-start;
+  }
+
+  .hero-divider span:first-child {
+    max-width: 90px;
+  }
+
+  .hero-divider span:last-child {
+    flex: 1;
   }
 
   .hero-divider img {
