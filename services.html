@@ -361,15 +361,37 @@ footer p {
   margin-bottom: 8px;
 }
 
-/* Responsive layout for mobile */
+/* Responsive layout for mobile — tight Wind Mitigation image/text spacing */
 @media (max-width: 768px) {
+  .wind-section {
+    padding-top: 0 !important;
+    padding-bottom: 35px !important;
+  }
+
   .wind-wrap {
-    flex-direction: column;
-    text-align: left;
+    flex-direction: column !important;
+    text-align: left !important;
+    gap: 10px !important;
+  }
+
+  .wind-img,
+  .wind-text {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .wind-img img {
-    max-width: 100%;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .wind-text h2 {
+    margin-top: 8px !important;
+    margin-bottom: 12px !important;
   }
 }
 /* ✅ FOUR-POINT INSPECTION SECTION */
