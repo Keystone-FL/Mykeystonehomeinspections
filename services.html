@@ -395,9 +395,14 @@ footer p {
   }
 }
 /* ✅ FOUR-POINT INSPECTION SECTION */
-.fourpoint-section {
-  background: #ffffff;
-  padding: 80px 8%;
+@media (max-width: 768px) {
+  .fourpoint-wrap {
+    flex-direction: column;
+    text-align: left;
+  }
+  .fourpoint-img img {
+    max-width: 100%;
+  }
 }
 
 .fourpoint-wrap {
