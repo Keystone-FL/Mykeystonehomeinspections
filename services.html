@@ -992,32 +992,28 @@ appearance: none;
     padding-top: 20px !important; /* minimal padding */
   }
 }
-/* ★ FINAL FIX — Clean, correct spacing between image and text on mobile */
+/* ★ FINAL FIX — Tighter spacing between image and heading (mobile only) */
 @media (max-width: 768px) {
 
-  /* Put image above text (your intended layout) */
   .residential-section {
     flex-direction: column-reverse !important;
-    padding-top: 10px !important;
-    padding-bottom: 30px !important;
+    padding-top: 0px !important;
+    padding-bottom: 25px !important;
   }
 
-  /* Remove all space under image */
   .residential-section .image-content img {
-    margin-bottom: 0 !important;
+    margin-bottom: 5px !important;
   }
 
-  /* Remove all space above text */
   .residential-section .text-content {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
 
-  /* Remove any hidden margins that may come from children */
-  .residential-section h2,
-  .residential-section p {
-    margin-top: 10px !important;
+  .residential-section h2 {
+    margin-top: 8px !important;
   }
+
 }
 /* === ACCESSIBILITY HELPERS === */
 
