@@ -431,21 +431,42 @@ footer p {
   margin-bottom: 20px;
 }
 
-/* Mobile layout */
+/* Mobile layout — FINAL TIGHT VERSION (matches Residential) */
 @media (max-width: 768px) {
+
+  .fourpoint-section {
+    padding-top: 10px !important;
+    padding-bottom: 30px !important;
+  }
+
   .fourpoint-wrap {
-    flex-direction: column-reverse; /* ✅ puts image on top */
-    text-align: left;
+    flex-direction: column-reverse !important;
+    gap: 10px !important;
+  }
+
+  .fourpoint-img,
+  .fourpoint-text {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .fourpoint-img img {
-    max-width: 100%;
-    margin-bottom: 10px !important; /* optional: tight spacing like residential */
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 auto 5px auto !important;
   }
 
   .fourpoint-text {
-    margin-top: -10px !important; /* pulls text up closer to image */
+    margin-top: -8px !important;
   }
+
+  .fourpoint-text h2 {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+
 }
 /* ✅ SPECIALTY INSPECTIONS SECTION */
 .specialty-section {
