@@ -1089,11 +1089,22 @@ appearance: none;
 /* === MOBILE BUILDING TRUST HERO === */
 @media (max-width: 768px) {
 
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .hero {
+    width: 100vw;
+    max-width: 100vw;
     min-height: 720px;
-    background-position: 65% center;
-    padding: 60px 6% 0;
+    background-size: cover;
+    background-position: 58% center;
+    padding: 45px 6% 0;
     align-items: flex-start;
+    box-sizing: border-box;
   }
 
   .hero-copy {
@@ -1101,34 +1112,81 @@ appearance: none;
   }
 
   .hero-copy h1 {
-    font-size: 2.2em;
-    line-height: 1.25;
+    font-size: 2.05em;
+    line-height: 1.22;
     white-space: normal;
+    color: #002b5c;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.45);
   }
 
   .hero-divider {
     width: 100%;
-    max-width: 320px;
-    margin-bottom: 20px;
+    max-width: 360px;
+    gap: 14px;
+    margin-bottom: 24px;
   }
 
   .hero-divider img {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     padding: 5px;
   }
 
   .hero-lead {
-    font-size: 1.25em;
+    font-size: 1.18em;
+    line-height: 1.35;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.65);
   }
 
   .hero-subtext {
-    font-size: 1em;
-    max-width: 320px;
+    font-size: 0.98em;
+    line-height: 1.45;
+    max-width: 330px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
   }
 
   .hero-cta-below {
-    padding: 20px 0 10px;
+    padding: 24px 0 20px;
+  }
+
+  .hero-cta-below .button {
+    font-size: 1.15em;
+    padding: 16px 34px;
+  }
+
+  .residential-section,
+  .wind-section,
+  .fourpoint-section,
+  .prelisting-section,
+  .spectora-section,
+  .specialty-section,
+  .contact-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .image-content,
+  .wind-img,
+  .fourpoint-img,
+  .prelisting-img,
+  .spectora-img {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .image-content img,
+  .wind-img img,
+  .fourpoint-img img,
+  .prelisting-img img,
+  .spectora-img img {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 </style>
