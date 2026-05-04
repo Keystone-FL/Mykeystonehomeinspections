@@ -434,11 +434,17 @@ footer p {
 /* Mobile layout */
 @media (max-width: 768px) {
   .fourpoint-wrap {
-    flex-direction: column;
+    flex-direction: column-reverse; /* ✅ puts image on top */
     text-align: left;
   }
+
   .fourpoint-img img {
     max-width: 100%;
+    margin-bottom: 10px !important; /* optional: tight spacing like residential */
+  }
+
+  .fourpoint-text {
+    margin-top: -10px !important; /* pulls text up closer to image */
   }
 }
 /* ✅ SPECIALTY INSPECTIONS SECTION */
