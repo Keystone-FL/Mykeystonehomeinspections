@@ -1370,6 +1370,64 @@ appearance: none;
     display: none !important;
   }
 }
+/* === DESKTOP SERVICES PAGE LOGO BRANDING === */
+@media (min-width: 769px) {
+  .nav-wrapper {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .nav-logo {
+    position: absolute;
+    left: 28px !important;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+  }
+
+  .nav-logo img {
+    height: 105px !important;
+    width: auto !important;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.0;
+  }
+
+  .logo-main {
+    color: #ffffff;
+    font-size: 2.4em;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .logo-sub {
+    color: #f2b600;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .nav-menu {
+    margin-left: 120px !important;
+  }
+}
+
+/* Hide services page logo on mobile */
+@media (max-width: 768px) {
+  .nav-logo {
+    display: none !important;
+  }
+}
+
 </style>
 
 <!-- Google tag (gtag.js) -->
