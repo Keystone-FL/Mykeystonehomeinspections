@@ -1123,13 +1123,14 @@ appearance: none;
     margin-bottom: 300px;
   }
 
-    .hero-divider {
+     .hero-divider {
     width: 100% !important;
     max-width: 100% !important;
     display: flex !important;
-    align-items: center !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
     justify-content: flex-start !important;
-    gap: 12px !important;
+    gap: 8px !important;
     margin-bottom: 18px !important;
   }
 
@@ -1149,7 +1150,9 @@ appearance: none;
   .hero-divider span:last-of-type {
     order: 2 !important;
     display: block !important;
-    flex: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
     height: 2px !important;
     background: #c9a24a !important;
   }
