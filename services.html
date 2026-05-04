@@ -583,16 +583,42 @@ footer p {
   margin-bottom: 20px;
 }
 
-/* mobile stacking */
+/* Mobile layout — PRE-LISTING (tight, matches others) */
 @media (max-width: 768px) {
+
+  .prelisting-section {
+    padding-top: 10px !important;
+    padding-bottom: 30px !important;
+  }
+
   .prelisting-wrap {
-    flex-direction: column;
-    text-align: left;
+    flex-direction: column !important;
+    gap: 10px !important;
   }
+
+  .prelisting-img,
+  .prelisting-text {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .prelisting-img img {
-    max-width: 100%;
-    margin-bottom: 20px;
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 auto 5px auto !important;
   }
+
+  .prelisting-text {
+    margin-top: -8px !important;
+  }
+
+  .prelisting-text h2 {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+
 }
 /* ✅ SPECTORA REPORTS SECTION */
 .spectora-section {
