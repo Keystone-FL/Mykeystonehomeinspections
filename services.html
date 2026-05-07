@@ -484,71 +484,114 @@ footer p {
 /* ✅ SPECIALTY INSPECTIONS SECTION */
 .specialty-section {
   background: #ffffff;
-  padding: 80px 8%;
+  padding: 85px 8%;
+  display: block;
 }
 
-.specialty-section h2 {
-  color: #002b5c;
-  font-size: 2em;
+.specialty-container {
+  max-width: 1350px;
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 40px;
 }
 
-/* Generic layout for each subsection */
-.specialty-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
-}
-
-/* Consistent circular images */
-.specialty-item img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 25px rgba(0, 43, 92, 0.35);
-  transition: all 0.35s ease;
-}
-
-.specialty-item img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 35px rgba(0, 43, 92, 0.55);
-}
-
-.specialty-text {
-  flex: 1 1 480px;
-}
-
-.specialty-text h3 {
+.specialty-container h2 {
   color: #002b5c;
-  font-size: 1.6em;
-  margin-bottom: 12px;
+  font-size: 2.2em;
+  margin-bottom: 18px;
 }
 
-.specialty-text p {
-  font-size: 1.1em;
+.specialty-intro {
+  max-width: 850px;
+  margin: 0 auto 42px;
+  font-size: 1.15em;
+  line-height: 1.7;
+  color: #111;
+}
+
+.specialty-banner {
+  max-width: 1250px;
+  margin: 0 auto 55px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 43, 92, 0.25);
+}
+
+.specialty-banner img {
+  width: 100%;
+  display: block;
+}
+
+.specialty-container h3 {
+  color: #002b5c;
+  font-size: 1.9em;
+  margin-bottom: 32px;
+}
+
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  text-align: left;
+  max-width: 1100px;
+  margin: 0 auto 44px;
+}
+
+.specialty-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.specialty-grid li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 16px;
+  font-size: 1.08em;
+  line-height: 1.45;
+  color: #111;
+}
+
+.specialty-grid li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f2b600;
+  font-weight: bold;
+}
+
+.specialty-callout {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 24px 30px;
+  background: #f8f8f8;
+  border-left: 5px solid #f2b600;
+  border-radius: 10px;
+  color: #002b5c;
+  font-size: 1.15em;
   line-height: 1.6;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* Alternate image positions (left/right pattern) */
-.specialty-item.reverse {
-  flex-direction: row-reverse;
-}
-
-/* Mobile layout */
-@media (max-width: 768px) {
-  .specialty-item,
-  .specialty-item.reverse {
-    flex-direction: column;
-    text-align: left;
+/* Mobile */
+@media (max-width: 900px) {
+  .specialty-section {
+    padding: 60px 6%;
   }
 
-  .specialty-item img {
-    margin-bottom: 20px;
+  .specialty-container h2 {
+    font-size: 1.9em;
+  }
+
+  .specialty-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    gap: 0;
+  }
+
+  .specialty-banner {
+    border-radius: 12px;
+    margin-bottom: 40px;
   }
 }
 
