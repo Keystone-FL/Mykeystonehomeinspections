@@ -1091,71 +1091,26 @@ body {
     padding-top: 160px !important;
   }
 }
-/* === DESKTOP SERVICES PAGE LOGO BRANDING === */
+/* === DESKTOP ONLY: Push header logo toward true left edge === */
 @media (min-width: 769px) {
-  nav {
-    padding: 55px 0 !important;
-  }
-
   .nav-wrapper {
     max-width: none !important;
     width: 100% !important;
   }
 
   .nav-logo {
-    position: absolute;
-    left: 0px !important;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex !important;
-    align-items: center;
-    gap: 6px;
-    z-index: 2;
-  }
-
-  .nav-logo img {
-    height: 140px !important;
-    width: auto !important;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
-    background: transparent !important;
+    left: 28px !important;
   }
 
   .logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.0;
-    margin-left: -22px !important;
-  }
-
-  .logo-main {
-    color: #ffffff;
-    font-size: 3.25em;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-  }
-
-  .logo-sub {
-    color: #f2b600;
-    font-size: 1.25em;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-  }
-
-  .nav-menu {
-    margin-left: 0 !important;
-    gap: 26px !important;
+    margin-left: 6px !important;
   }
 
   .nav-buttons {
     right: 8% !important;
   }
-
-  body {
-    padding-top: 120px !important;
-  }
 }
+
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -1171,37 +1126,37 @@ body {
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <nav aria-label="Primary navigation">
-<div class="nav-wrapper">
+  <div class="nav-wrapper">
 
+  <!-- ✅ ADD THIS LOGO BLOCK -->
   <div class="nav-logo">
-    <img src="images/Keystone Logo Circle outside circle transparent 2.png" alt="Keystone Home Inspections Logo">
-
-    <div class="logo-text">
-      <div class="logo-main">Keystone</div>
-      <div class="logo-sub">Home Inspections</div>
-    </div>
+  <img src="images/Keystone Logo Circle.png" alt="Keystone Home Inspections Logo">
+  
+  <div class="logo-text">
+    <div class="logo-main">Keystone</div>
+    <div class="logo-sub">Home Inspections</div>
   </div>
-
-  <!-- MENU CENTER -->
-  <ul class="nav-menu">
-  <li><a href="/index.html">Home</a></li>
-  <li><a href="/index.html#about">About</a></li>
-  <li><a href="/services.html">Services</a></li>
- <li><a href="/index.html#areas">Service Areas</a></li>
-<li class="mobile-nav-break" aria-hidden="true"></li>
-<li><a href="/index.html#discounts">Discounts</a></li>
-<li><a href="/index.html#contact">Contact</a></li>
-</ul>
-
-    <div class="nav-buttons">
-  <a href="tel:15615966083" class="top-btn phone">
-    <span aria-hidden="true">📞</span> 561-596-6083
-  </a>
-  <a href="mailto:MyKeystoneInspections@gmail.com" class="top-btn email">
-    <span aria-hidden="true">✉️</span> Email Us
-  </a>
 </div>
+
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="#areas">Service Areas</a></li>
+    <li class="discount-nav"><a href="#discounts">Discounts</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-buttons">
+    <a href="tel:15615966083" class="top-btn phone">
+      <span aria-hidden="true">📞</span> 561-596-6083
+    </a>
+    <a href="mailto:MyKeystoneInspections@gmail.com" class="top-btn email">
+      <span aria-hidden="true">✉️</span> Email Us
+    </a>
   </div>
+
+</div>
 </nav>
 <main id="main" tabindex="-1">
 <div class="logo">
@@ -1542,4 +1497,5 @@ body {
 
 </body>
 </html>
+
 
