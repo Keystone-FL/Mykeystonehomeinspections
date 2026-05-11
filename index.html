@@ -1212,6 +1212,36 @@ body {
     outline: 2px solid #f2b600 !important;
   }
 }
+/* === CORE SERVICES PREMIUM HOVER EFFECT === */
+
+#core-services a > div {
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+#core-services a:hover > div {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,0.18),
+    0 0 14px rgba(242,182,0,0.28);
+
+  border-color: #f2b600;
+}
+
+#core-services a:hover .service-img {
+  transform: scale(1.03);
+}
+
+#core-services .service-img {
+  transition: transform 0.35s ease;
+}
+
+#core-services a {
+  cursor: pointer;
+}
 </style>
 
 <!-- Google tag (gtag.js) -->
