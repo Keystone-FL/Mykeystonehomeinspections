@@ -1180,6 +1180,38 @@ body {
 #contact {
   scroll-margin-top: 180px;
 }
+/* === DESKTOP: SCHEDULE BUTTON ABOVE PHONE / EMAIL === */
+@media (min-width: 769px) {
+  .nav-buttons {
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: center !important;
+  }
+
+  .nav-contact-buttons {
+    display: flex !important;
+    gap: 14px !important;
+  }
+
+  .top-schedule-btn {
+    background: #f2b600 !important;
+    color: #002b5c !important;
+    padding: 15px 34px !important;
+    border-radius: 6px !important;
+    font-size: 1.1em !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    border: none !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  .top-schedule-btn:hover {
+    background: #002b5c !important;
+    color: #f2b600 !important;
+    outline: 2px solid #f2b600 !important;
+  }
+}
 </style>
 
 <!-- Google tag (gtag.js) -->
