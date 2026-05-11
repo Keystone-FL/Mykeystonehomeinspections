@@ -1242,6 +1242,37 @@ body {
 #core-services a {
   cursor: pointer;
 }
+/* === MOBILE ONLY: CLEAN STACKED NAV BUTTONS === */
+@media (max-width: 768px) {
+
+  .nav-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .nav-contact-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .top-schedule-btn {
+    width: auto !important;
+    text-align: center !important;
+    padding: 12px 30px !important;
+    border-radius: 28px !important;
+  }
+
+  .top-btn {
+    min-width: 145px !important;
+    text-align: center !important;
+  }
+
+}
 </style>
 
 <!-- Google tag (gtag.js) -->
